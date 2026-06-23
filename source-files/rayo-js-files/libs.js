@@ -10913,7 +10913,7 @@ For e.g. 'http://blahblah.us1.list-manage.com/subscribe/post-json?u=5afsdhfuhdsi
    * GSAP 3.12.7
    * https://gsap.com
    *
-   * @license Copyright 2008-2025, GreenSock. All rights reserved.
+   * @license Copyright 2008-2026, GreenSock. All rights reserved.
    * Subject to the terms at https://gsap.com/standard-license or for
    * Club GSAP members, the agreement issued with that membership.
    * @author: Jack Doyle, jack@greensock.com
@@ -16532,7 +16532,7 @@ For e.g. 'http://blahblah.us1.list-manage.com/subscribe/post-json?u=5afsdhfuhdsi
    * Observer 3.12.7
    * https://gsap.com
    *
-   * @license Copyright 2008-2025, GreenSock. All rights reserved.
+   * @license Copyright 2008-2026, GreenSock. All rights reserved.
    * Subject to the terms at https://gsap.com/standard-license or for
    * Club GSAP members, the agreement issued with that membership.
    * @author: Jack Doyle, jack@greensock.com
@@ -17203,7 +17203,7 @@ For e.g. 'http://blahblah.us1.list-manage.com/subscribe/post-json?u=5afsdhfuhdsi
    * ScrollTrigger 3.12.7
    * https://gsap.com
    *
-   * @license Copyright 2008-2025, GreenSock. All rights reserved.
+   * @license Copyright 2008-2026, GreenSock. All rights reserved.
    * Subject to the terms at https://gsap.com/standard-license or for
    * Club GSAP members, the agreement issued with that membership.
    * @author: Jack Doyle, jack@greensock.com
@@ -19767,7 +19767,7 @@ For e.g. 'http://blahblah.us1.list-manage.com/subscribe/post-json?u=5afsdhfuhdsi
 	 * ScrollToPlugin 3.12.7
 	 * https://gsap.com
 	 *
-	 * @license Copyright 2008-2025, GreenSock. All rights reserved.
+	 * @license Copyright 2008-2026, GreenSock. All rights reserved.
 	 * Subject to the terms at https://gsap.com/standard-license or for
 	 * Club GSAP members, the agreement issued with that membership.
 	 * @author: Jack Doyle, jack@greensock.com
@@ -20413,7 +20413,7 @@ For e.g. 'http://blahblah.us1.list-manage.com/subscribe/post-json?u=5afsdhfuhdsi
 	 * Flip 3.12.7
 	 * https://gsap.com
 	 *
-	 * @license Copyright 2008-2025, GreenSock. All rights reserved.
+	 * @license Copyright 2008-2026, GreenSock. All rights reserved.
 	 * Subject to the terms at https://gsap.com/standard-license or for
 	 * Club GSAP members, the agreement issued with that membership.
 	 * @author: Jack Doyle, jack@greensock.com
@@ -29324,11 +29324,11 @@ return function(){function t(t,s){e.load(this,s,t),this.begin()}var s=t.prototyp
  * Most modern mobile touch slider and framework with hardware accelerated transitions
  * https://swiperjs.com
  *
- * Copyright 2014-2025 Vladimir Kharlampidi
+ * Copyright 2014-2026 Vladimir Kharlampidi
  *
  * Released under the MIT License
  *
- * Released on: March 3, 2025
+ * Released on: March 3, 2026
  */
 
 var Swiper = (function () {
@@ -29339,11 +29339,11 @@ var Swiper = (function () {
    * Better handling for window object in SSR environment
    * https://github.com/nolimits4web/ssr-window
    *
-   * Copyright 2025, Vladimir Kharlampidi
+   * Copyright 2026, Vladimir Kharlampidi
    *
    * Licensed under MIT
    *
-   * Released on: February 12, 2025
+   * Released on: February 12, 2026
    */
   /* eslint-disable no-param-reassign */
   function isObject$1(obj) {
@@ -39108,11 +39108,11 @@ var Swiper = (function () {
    * Most modern mobile touch slider and framework with hardware accelerated transitions
    * https://swiperjs.com
    *
-   * Copyright 2014-2025 Vladimir Kharlampidi
+   * Copyright 2014-2026 Vladimir Kharlampidi
    *
    * Released under the MIT License
    *
-   * Released on: March 3, 2025
+   * Released on: March 3, 2026
    */
 
 

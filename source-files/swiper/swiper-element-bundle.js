@@ -3,11 +3,11 @@
  * Most modern mobile touch slider and framework with hardware accelerated transitions
  * https://swiperjs.com
  *
- * Copyright 2014-2025 Vladimir Kharlampidi
+ * Copyright 2014-2026 Vladimir Kharlampidi
  *
  * Released under the MIT License
  *
- * Released on: March 3, 2025
+ * Released on: March 3, 2026
  */
 
 (function () {
@@ -18,11 +18,11 @@
    * Better handling for window object in SSR environment
    * https://github.com/nolimits4web/ssr-window
    *
-   * Copyright 2025, Vladimir Kharlampidi
+   * Copyright 2026, Vladimir Kharlampidi
    *
    * Licensed under MIT
    *
-   * Released on: February 12, 2025
+   * Released on: February 12, 2026
    */
   /* eslint-disable no-param-reassign */
   function isObject$2(obj) {
@@ -9787,11 +9787,11 @@
    * Most modern mobile touch slider and framework with hardware accelerated transitions
    * https://swiperjs.com
    *
-   * Copyright 2014-2025 Vladimir Kharlampidi
+   * Copyright 2014-2026 Vladimir Kharlampidi
    *
    * Released under the MIT License
    *
-   * Released on: March 3, 2025
+   * Released on: March 3, 2026
    */
 
 
@@ -10122,11 +10122,11 @@
    * Most modern mobile touch slider and framework with hardware accelerated transitions
    * https://swiperjs.com
    *
-   * Copyright 2014-2025 Vladimir Kharlampidi
+   * Copyright 2014-2026 Vladimir Kharlampidi
    *
    * Released under the MIT License
    *
-   * Released on: March 3, 2025
+   * Released on: March 3, 2026
    */
 
 

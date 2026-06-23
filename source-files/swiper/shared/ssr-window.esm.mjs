@@ -3,11 +3,11 @@
  * Better handling for window object in SSR environment
  * https://github.com/nolimits4web/ssr-window
  *
- * Copyright 2025, Vladimir Kharlampidi
+ * Copyright 2026, Vladimir Kharlampidi
  *
  * Licensed under MIT
  *
- * Released on: February 12, 2025
+ * Released on: February 12, 2026
  */
 /* eslint-disable no-param-reassign */
 function isObject(obj) {
