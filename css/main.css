@@ -605,7 +605,7 @@ body {
   overflow-x: unset !important;
   font: normal 400 var(--_size)/1.6 var(--_font-default);
   text-rendering: optimizeLegibility;
-  background-color: var(--base);
+  background-color: transparent;
   color: var(--t-medium);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -702,6 +702,7 @@ html.lenis, html.lenis body {
 /* ------------------------------------------------*/
 .mxd-page-content {
   position: relative;
+  z-index: 3;
 }
 .mxd-page-content.inner-page-content {
   padding-top: 7.6rem;
@@ -6450,6 +6451,7 @@ form textarea:required:valid {
 /* ------------------------------------------------*/
 .mxd-footer {
   position: relative;
+  z-index: 3;
   width: 100%;
   max-width: 1920px;
   margin: 0 auto;
@@ -8168,23 +8170,22 @@ form textarea:required:valid {
 
 /* Hero Video Background */
 .hero-bg-video {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   object-fit: cover;
   z-index: 1;
-  /* opacity: ;  */
   pointer-events: none;
 }
 .hero-bg-overlay {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100vh;
-  background: linear-gradient(to bottom, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.35) 60%, rgba(0,0,0,0.65) 100%);
+  height: 100%;
+  background: rgba(0, 0, 0, 0.72);
   z-index: 2;
   pointer-events: none;
 }
