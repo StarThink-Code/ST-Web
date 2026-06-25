@@ -518,7 +518,7 @@ body {
   overflow-x: unset !important;
   font: normal 400 var(--_size)/1.6 var(--_font-default);
   text-rendering: optimizeLegibility;
-  background-color: transparent;
+  background-color: #0D0D0D;
   color: var(--t-medium);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
