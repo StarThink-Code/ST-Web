@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--
+===========================================
+  StarThink — Portable Preloader
+===========================================
+  HOW TO USE IN ANOTHER PROJECT:
+  1. Copy the <style> block into your CSS file
+  2. Copy the <div id="preloader"> block to the very top of your <body>
+  3. Copy the <script> block to the bottom of your <body> (before </body>)
+  4. Change the letters inside .loader-letter spans to your brand name
+  5. Update the two color values marked with [BRAND COLOR] to your palette
+===========================================
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preloader — Portable</title>
+
+    <!-- =============================================
+         STEP 1 — Copy this entire <style> block
+         into your project's CSS file
+    ============================================= -->
+    <style>
+
+        /* ── Preloader overlay ── */
+        #preloader {
+            position: fixed;
+            inset: 0;
+            z-index: 9999999;
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+            background: #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* ── Two split panels that fly off screen ── */
+        .preloader-bg {
+            position: absolute;
+            width: 100%;
+            height: 50%;
+            background-color: #111;
+            transition: transform 1s ease-in-out;
+            z-index: 5;
+        }
+        .preloader-bg-one { top: 0; }
+        .preloader-bg-two { bottom: 0; }
+
+        /* ── Letter container — fluid responsive sizing ── */
+        .loader-wrapper {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 10;
+            width: 90vw;
+            max-width: 780px;
+            min-height: 80px;
+            margin: 0 auto;
+            font-family: "Sora", "Urbanist", sans-serif; /* change to your font */
+            font-size: clamp(22px, 7.5vw, 84px);         /* fluid: fits any screen */
+            font-weight: 600;
+            letter-spacing: 0.04em;
+            user-select: none;
+            color: #fff;
+            transition: opacity 1s ease;
+            direction: ltr;
+        }
+
+        /* ── Animated color light stripe overlay ── */
+        .loader {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            z-index: 1;
+            background-color: transparent;
+            mask: repeating-linear-gradient(
+                90deg,
+                transparent 0,
+                transparent 6px,
+                #5AF503 6px,    /* [BRAND COLOR 1] — Primary */
+                #5AF503 9px
+            );
+            -webkit-mask: repeating-linear-gradient(
+                90deg,
+                transparent 0,
+                transparent 6px,
+                #5AF503 6px,    /* [BRAND COLOR 1] — Primary */
+                #5AF503 9px
+            );
+        }
+
+        .loader::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image:
+                radial-gradient(circle at 50% 50%, #5AF503 0%, transparent 50%),   /* [BRAND COLOR 1] */
+                radial-gradient(circle at 45% 45%, #7D53FF 0%, transparent 45%),   /* [BRAND COLOR 2] */
+                radial-gradient(circle at 55% 55%, #5AF503 0%, transparent 45%),   /* [BRAND COLOR 1] */
+                radial-gradient(circle at 45% 55%, #7D53FF 0%, transparent 45%),   /* [BRAND COLOR 2] */
+                radial-gradient(circle at 55% 45%, #1a4a00 0%, transparent 45%);
+            mask: radial-gradient(circle at 50% 50%, transparent 0%, transparent 10%, black 25%);
+            -webkit-mask: radial-gradient(circle at 50% 50%, transparent 0%, transparent 10%, black 25%);
+            animation:
+                preloader-slide 2s infinite alternate,
+                preloader-fade  4s infinite;
+            animation-timing-function: cubic-bezier(0.6, 0.8, 0.5, 1);
+        }
+
+        @keyframes preloader-slide {
+            0%   { transform: translate(-55%); }
+            100% { transform: translate(55%);  }
+        }
+
+        @keyframes preloader-fade {
+            0%, 100% { opacity: 0; }
+            15%       { opacity: 1; }
+            65%       { opacity: 0; }
+        }
+
+        /* ── Individual letter animation ── */
+        .loader-letter {
+            display: inline-block;
+            opacity: 0;
+            animation: loader-letter-anim 4s infinite linear;
+            z-index: 2;
+        }
+
+        /* Stagger each letter — add more :nth-child rules if your word is longer */
+        .loader-letter:nth-child(1)  { animation-delay: 0.100s; }
+        .loader-letter:nth-child(2)  { animation-delay: 0.205s; }
+        .loader-letter:nth-child(3)  { animation-delay: 0.310s; }
+        .loader-letter:nth-child(4)  { animation-delay: 0.415s; }
+        .loader-letter:nth-child(5)  { animation-delay: 0.521s; }
+        .loader-letter:nth-child(6)  { animation-delay: 0.626s; }
+        .loader-letter:nth-child(7)  { animation-delay: 0.731s; }
+        .loader-letter:nth-child(8)  { animation-delay: 0.837s; }
+        .loader-letter:nth-child(9)  { animation-delay: 0.942s; }
+        .loader-letter:nth-child(10) { animation-delay: 1.047s; }
+        .loader-letter:nth-child(11) { animation-delay: 1.152s; }
+        .loader-letter:nth-child(12) { animation-delay: 1.257s; }
+
+        @keyframes loader-letter-anim {
+            0%   { filter: blur(0px);  opacity: 0; }
+            5%   { opacity: 1; text-shadow: 0 0 4px #8d8379; filter: blur(0px); transform: scale(1.1) translateY(-2px); }
+            20%  { opacity: 0.2; filter: blur(0px); }
+            100% { filter: blur(5px);  opacity: 0; }
+        }
+
+        /* ── Accessibility: respect reduced motion preference ── */
+        @media (prefers-reduced-motion: reduce) {
+            .loader-letter  { animation: none; opacity: 1; }
+            .loader::after  { animation: none; }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- =============================================
+         STEP 2 — Copy this block to the very
+         top of your <body> tag
+    ============================================= -->
+
+    <div id="preloader">
+        <div class="preloader-bg preloader-bg-one"></div>
+        <div class="preloader-bg preloader-bg-two"></div>
+        <div class="loader-wrapper">
+            <!-- Change these letters to your brand name -->
+            <span class="loader-letter">S</span>
+            <span class="loader-letter">T</span>
+            <span class="loader-letter">A</span>
+            <span class="loader-letter">R</span>
+            <span class="loader-letter">T</span>
+            <span class="loader-letter">H</span>
+            <span class="loader-letter">I</span>
+            <span class="loader-letter">N</span>
+            <span class="loader-letter">K</span>
+            <div class="loader"></div>
+        </div>
+    </div>
+
+    <!-- your page content goes here -->
+    <h1 style="font-family:sans-serif; text-align:center; margin-top:40vh; color:#333;">
+        Page loaded!
+    </h1>
+
+    <!-- =============================================
+         STEP 3 — Copy this <script> block to the
+         bottom of your <body> (no jQuery needed)
+    ============================================= -->
+    <script>
+        (function () {
+            var preloader   = document.getElementById("preloader");
+            var bgOne       = document.querySelector(".preloader-bg-one");
+            var bgTwo       = document.querySelector(".preloader-bg-two");
+            var wrapper     = document.querySelector(".loader-wrapper");
+
+            if (!preloader) return;
+
+            // After 1s — start panel split + fade wrapper
+            setTimeout(function () {
+                if (bgOne)    bgOne.style.transform  = "translateY(-100%)";
+                if (bgTwo)    bgTwo.style.transform  = "translateY(100%)";
+                if (wrapper)  wrapper.style.opacity  = "0";
+            }, 1000);
+
+            // After 1.6s — hide preloader completely
+            setTimeout(function () {
+                preloader.style.opacity    = "0";
+                preloader.style.transition = "opacity 0.4s ease";
+                setTimeout(function () {
+                    preloader.style.display = "none";
+                }, 400);
+            }, 1600);
+        })();
+    </script>
+
+</body>
+</html>
