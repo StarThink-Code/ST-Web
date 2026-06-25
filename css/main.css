@@ -65,7 +65,7 @@
   --base-tint--dark: #1C1C1C;
   --base-shade--dark: #0a0a0a;
   --base-opp--dark: #FFFFFF;
-  --base-opp-tint--dark: #FFFFFF;
+  --base-opp-tint--dark: #2d2d2df1;
   --accent--dark: #89F336;
   --accent-rgb--dark: 137, 243, 54;
   --additional--dark: #6BC428;
@@ -5780,7 +5780,7 @@ form textarea:required:valid {
   z-index: 2;
 }
 .mxd-menu__data p {
-  color: var(--t-opp-medium);
+  color: whitesmoke;
 }
 .mxd-menu__data p a {
   color: var(--t-opp-medium);
@@ -5832,7 +5832,7 @@ form textarea:required:valid {
 .mxd-menu__caption {
   margin-bottom: 4.4rem;
   font-weight: var(--fw-regular-opp);
-  color: var(--t-opp-medium);
+  color: whitesmoke;
 }
 @media only screen and (min-width: 1200px) {
   .mxd-menu__caption {
@@ -5909,7 +5909,7 @@ form textarea:required:valid {
   height: 4.2rem;
   line-height: 4.2rem;
   font: normal var(--fw-medium-opp) 3.6rem var(--_font-accent);
-  color: var(--t-opp-bright);
+  color: white;
 }
 .main-menu__link .btn-caption {
   height: 4.2rem;
@@ -6099,7 +6099,7 @@ form textarea:required:valid {
 
 .menu-promo__caption {
   font-weight: var(--fw-regular-opp);
-  color: var(--t-opp-medium);
+  color: whitesmoke;
 }
 @media only screen and (min-width: 1200px) {
   .menu-promo__caption {
