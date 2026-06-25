@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Services — StarThink Digital Marketing Agency Malaysia</title>
+    <meta name="description" content="Explore StarThink's full range of digital marketing services in Malaysia — from paid ads and content creation to video editing, poster design, and website development.">
+    <meta name="keywords" content="StarThink, digital marketing services Malaysia, paid ads, content creation, video editing, social media management, poster design, website development, talent management">
+    <meta name="author" content="StarThink">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <link rel="icon" href="img/logo/faviocn.png" type="image/png">
+    <link rel="apple-touch-icon" href="img/logo/faviocn.png">
+    <meta property="og:image:height" content="1200">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:title" content="Services — StarThink Digital Marketing Agency Malaysia">
+    <meta property="og:description" content="Full-cycle digital marketing services for Malaysian businesses.">
+    <meta property="og:url" content="https://www.starthinkmy.com/services.html">
+    <meta property="og:image" content="img/og-image.jpg">
+    <link rel="stylesheet" type="text/css" href="css/loaders/loader.css">
+    <link rel="stylesheet" type="text/css" href="css/plugins.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <meta name="theme-color" content="#0D0D0D">
+    <meta name="msapplication-navbutton-color" content="#0D0D0D">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <style>
+      /* ── Service Cards ── */
+      .srv-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2.4rem;
+        padding: 0;
+      }
+      @media (max-width: 991px) {
+        .srv-grid { grid-template-columns: 1fr; }
+        .srv-card--wide { grid-column: span 1; }
+      }
+      .srv-card--wide { grid-column: span 2; }
+      @media (max-width: 991px) { .srv-card--wide { grid-column: span 1; } }
+
+      .srv-card {
+        border-radius: var(--_radius-m, 16px);
+        overflow: hidden;
+        border: 1px solid rgba(255,255,255,0.14);
+        background: rgba(14,14,14,0.88);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(12px);
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        transition: border-color 0.35s ease, transform 0.35s ease;
+      }
+      .srv-card:hover { border-color: rgba(137,243,54,0.35); transform: translateY(-4px); }
+
+      .srv-card__visual {
+        position: relative;
+        overflow: hidden;
+        flex-shrink: 0;
+      }
+      .srv-card__visual img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        transition: transform 0.7s cubic-bezier(0.25,0.46,0.45,0.94);
+      }
+      .srv-card:hover .srv-card__visual img { transform: scale(1.06); }
+
+      .srv-card__visual--photo { height: 340px; }
+      .srv-card--wide .srv-card__visual--photo { height: 420px; }
+      .srv-card__visual--obj { height: 280px; background: rgba(20,20,20,0.6); display:flex; align-items:center; justify-content:center; }
+      .srv-card__visual--obj img { width: 200px; height: 200px; object-fit: contain; }
+
+      .srv-card__overlay {
+        position: absolute; inset: 0;
+        background: linear-gradient(to top, rgba(10,10,10,0.85) 0%, transparent 55%);
+        pointer-events: none;
+      }
+
+      .srv-card__num {
+        position: absolute;
+        top: 2rem; left: 2.4rem;
+        font-family: "Funnel Display", sans-serif;
+        font-size: 1rem;
+        font-weight: 800;
+        letter-spacing: 0.14em;
+        color: rgba(255,255,255,0.45);
+        line-height: 1;
+      }
+
+      .srv-card__tag {
+        position: absolute;
+        top: 2rem; right: 2.4rem;
+        background: rgba(137,243,54,0.12);
+        border: 1px solid rgba(137,243,54,0.3);
+        border-radius: 100px;
+        padding: 0.4rem 1.2rem;
+        font-size: 1.1rem;
+        color: #89F336;
+        font-weight: 600;
+        letter-spacing: 0.04em;
+      }
+
+      .srv-card__name-overlay {
+        position: absolute;
+        bottom: 2.4rem; left: 2.4rem; right: 2.4rem;
+        font-family: "Funnel Display", sans-serif;
+        font-size: clamp(2rem, 2.8vw, 3.2rem);
+        font-weight: 800;
+        color: #fff;
+        line-height: 1.1;
+        pointer-events: none;
+      }
+
+      .srv-card__body {
+        padding: 3rem 3rem 3.2rem;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .srv-card__descr {
+        font-size: 1.4rem;
+        line-height: 1.75;
+        opacity: 0.6;
+        margin-bottom: 2.4rem;
+        flex: 1;
+      }
+
+      .srv-card__features {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.8rem;
+        margin-bottom: 2.8rem;
+      }
+
+      .srv-card__feat {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.6rem;
+        padding: 0.5rem 1.2rem;
+        border-radius: 100px;
+        border: 1px solid rgba(255,255,255,0.1);
+        font-size: 1.2rem;
+        opacity: 0.7;
+        transition: opacity 0.2s, border-color 0.2s;
+      }
+      .srv-card:hover .srv-card__feat { opacity: 0.9; border-color: rgba(137,243,54,0.2); }
+      .srv-card__feat i { color: #89F336; font-size: 1.3rem; }
+
+      /* ── Hero accent line ── */
+      .srv-hero-line {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+        margin-bottom: 3.2rem;
+        flex-wrap: wrap;
+      }
+      .srv-hero-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 1rem;
+        padding: 0.8rem 2rem;
+        border: 1px solid rgba(137,243,54,0.3);
+        border-radius: 100px;
+        font-size: 1.3rem;
+        color: #89F336;
+        font-weight: 600;
+      }
+
+      /* ── Wide card horizontal layout ── */
+      @media (min-width: 992px) {
+        .srv-card--wide .srv-card__inner-wrap {
+          display: flex;
+          flex-direction: row;
+        }
+        .srv-card--wide .srv-card__visual {
+          width: 48%;
+          flex-shrink: 0;
+        }
+        .srv-card--wide .srv-card__visual--photo {
+          height: 100%;
+          min-height: 340px;
+        }
+        .srv-card--wide .srv-card__visual--obj {
+          height: 100%;
+          min-height: 300px;
+          width: 40%;
+        }
+        .srv-card--wide .srv-card__body { padding: 4rem 3.6rem; }
+      }
+    </style>
+
+  </head>
+
+  <body>
+
+    <canvas id="particles-canvas" style="position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:0;"></canvas>
+    <video class="hero-bg-video" src="video/tech.mp4" autoplay muted loop playsinline></video>
+    <div class="hero-bg-overlay"></div>
+
+    <div id="loader" class="loader">
+      <div class="loader__panel loader__panel--top"></div>
+      <div class="loader__panel loader__panel--bottom"></div>
+      <div class="loader__brand">
+        <span class="loader__letter">S</span><span class="loader__letter">T</span><span class="loader__letter">A</span><span class="loader__letter">R</span><span class="loader__letter">T</span><span class="loader__letter">H</span><span class="loader__letter">I</span><span class="loader__letter">N</span><span class="loader__letter">K</span>
+        <div class="loader__light"></div>
+      </div>
+    </div>
+
+    <nav class="mxd-nav__wrap" data-lenis-prevent="">
+      <div class="mxd-nav__contain loading__fade">
+        <a href="#0" class="mxd-nav__hamburger" aria-label="Menu">
+          <div class="hamburger__base"></div>
+          <div class="hamburger__line"></div>
+          <div class="hamburger__line"></div>
+        </a>
+      </div>
+      <div class="mxd-menu__wrapper">
+        <div class="mxd-menu__base"></div>
+        <div class="mxd-menu__contain">
+          <div class="mxd-menu__inner">
+            <div class="mxd-menu__left">
+              <p class="mxd-menu__caption menu-fade-in">✦ Your preferred digital marketing<br>agency in Malaysia</p>
+              <div class="main-menu">
+                <nav class="main-menu__content">
+                  <ul id="main-menu" class="main-menu__accordion">
+                    <li class="main-menu__item"><a class="main-menu__link btn btn-anim" href="index.html"><span class="btn-caption">Home</span></a></li>
+                    <li class="main-menu__item"><a class="main-menu__link btn btn-anim" href="about-us.html"><span class="btn-caption">About Us</span></a></li>
+                    <li class="main-menu__item"><a class="main-menu__link btn btn-anim" href="services.html"><span class="btn-caption">Services</span></a></li>
+                    <li class="main-menu__item"><a class="main-menu__link btn btn-anim" href="works-simple.html"><span class="btn-caption">Project</span></a></li>
+                    <li class="main-menu__item"><a class="main-menu__link btn btn-anim" href="blog-article.html"><span class="btn-caption">Article</span></a></li>
+                    <li class="main-menu__item"><a class="main-menu__link btn btn-anim" href="contact.html"><span class="btn-caption">Contact Us</span></a></li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+            <div class="mxd-menu__right">
+              <div class="menu-promo">
+                <div class="menu-promo__content">
+                  <p class="menu-promo__caption menu-fade-in">👋 We help small businesses grow<br>through creative content, strategy,<br>and storytelling that builds real connections.</p>
+                  <div class="menu-promo__video">
+                    <video class="menu-video" id="inner-video" preload="auto" autoplay="autoplay" loop="loop" muted="muted" poster="img/logo/Green_Logo.png">
+                      <source type="video/mp4" src="video/540x310_video.mp4">
+                      <source type="video/webm" src="video/540x310_video.webm">
+                      <source type="video/ogv" src="video/540x310_video.ogv">
+                    </video>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="mxd-menu__data menu-fade-in">
+              <p class="t-xsmall">StarThink Digital Marketing Agency</p>
+              <p class="t-xsmall"><i class="ph ph-copyright"></i> 2026 StarThink. All rights reserved.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <header id="header" class="mxd-header">
+      <div class="mxd-header__logo loading__fade">
+        <a href="index.html" class="mxd-logo">
+          <img src="img/logo/Logo.png" alt="StarThink" style="height: 84px; width: auto;">
+        </a>
+      </div>
+      <div class="mxd-header__controls loading__fade">
+        <a class="btn btn-anim btn-default btn-mobile-icon btn-outline slide-right-up" href="contact.html" aria-label="Get In Touch">
+          <span class="btn-caption">Get In Touch</span>
+          <i class="ph-bold ph-arrow-up-right"></i>
+        </a>
+      </div>
+    </header>
+
+    <main id="mxd-page-content" class="mxd-page-content inner-page-content">
+
+
+      <!-- ── Page Hero ── -->
+      <div class="mxd-section loading-wrap" style="padding-top: 6rem; padding-bottom: 7rem;">
+        <div class="mxd-container grid-container">
+
+          <div class="srv-hero-line loading__item anim-uni-in-up">
+            <div class="srv-hero-badge">
+              <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor"><path d="M19.6,9.6c0,0-3,0-4,0c-0.4,0-1.8-0.2-1.8-0.2c-0.6-0.1-1.1-0.2-1.6-0.6c-0.5-0.3-0.9-0.8-1.2-1.2c-0.3-0.4-0.4-0.9-0.5-1.4c0,0-0.1-1.1-0.2-1.5c-0.1-1.1,0-4.4,0-4.4C10.4,0.2,10.2,0,10,0S9.6,0.2,9.6,0.4c0,0,0.1,3.3,0,4.4c0,0.4-0.2,1.5-0.2,1.5C9.4,6.7,9.2,7.2,9,7.6C8.7,8.1,8.2,8.5,7.8,8.9c-0.5,0.3-1,0.5-1.6,0.6c0,0-1.2,0.1-1.7,0.2c-1,0.1-4.2,0-4.2,0C0.2,9.6,0,9.8,0,10c0,0.2,0.2,0.4,0.4,0.4c0,0,3.1-0.1,4.2,0c0.4,0,1.7,0.2,1.7,0.2c0.6,0.1,1.1,0.2,1.6,0.6c0.4,0.3,0.8,0.7,1.1,1.1c0.3,0.5,0.5,1,0.6,1.6c0,0,0.1,1.3,0.2,1.7c0,1,0,4.1,0,4.1c0,0.2,0.2,0.4,0.4,0.4s0.4-0.2,0.4-0.4c0,0,0-3.1,0-4.1c0-0.4,0.2-1.7,0.2-1.7c0.1-0.6,0.2-1.1,0.6-1.6c0.3-0.4,0.7-0.8,1.1-1.1c0.5-0.3,1-0.5,1.6-0.6c0,0,1.3-0.1,1.8-0.2c1,0,4,0,4,0c0.2,0,0.4-0.2,0.4-0.4C20,9.8,19.8,9.6,19.6,9.6L19.6,9.6z"/></svg>
+              9 Services
+            </div>
+            <span style="opacity:0.3; font-size:1.3rem;">Full-cycle digital marketing for every stage of your brand's growth</span>
+          </div>
+
+          <h1 class="loading__item reveal-type" style="line-height: 1.02; margin-bottom: 4rem; max-width: 900px;">
+            What we do best.
+          </h1>
+
+          <div class="loading__item anim-uni-in-up" style="display:flex; align-items:center; gap:2rem; flex-wrap:wrap;">
+            <a class="btn btn-anim btn-default btn-additional slide-right-up" href="contact.html">
+              <span class="btn-caption">Start a Project</span>
+              <i class="ph-bold ph-arrow-up-right"></i>
+            </a>
+            <a class="btn btn-anim btn-default btn-outline slide-right-up" href="works-simple.html">
+              <span class="btn-caption">View Our Work</span>
+              <i class="ph-bold ph-arrow-right"></i>
+            </a>
+          </div>
+
+        </div>
+      </div>
+
+
+      <!-- ── Services Grid ── -->
+      <div class="mxd-section" style="padding-top: 0; padding-bottom: 10rem;">
+        <div class="mxd-container grid-container">
+          <div class="srv-grid">
+
+
+            <!-- 01 Content Planning & Execute -->
+            <div class="srv-card anim-uni-in-up">
+              <div class="srv-card__inner-wrap">
+                <div class="srv-card__visual srv-card__visual--photo">
+                  <img src="img/services/service-content.jpg" alt="Content Planning">
+                  <div class="srv-card__overlay"></div>
+                  <span class="srv-card__num">01</span>
+                  <span class="srv-card__tag">Strategy</span>
+                  <div class="srv-card__name-overlay">Content Planning<br>& Execute</div>
+                </div>
+                <div class="srv-card__body">
+                  <p class="srv-card__descr">We plan your full content calendar — topics, formats, captions, and publishing schedule — then execute every piece so your brand stays consistent and always publishing without you lifting a finger.</p>
+                  <div class="srv-card__features">
+                    <span class="srv-card__feat"><i class="ph ph-check"></i> Monthly Content Calendar</span>
+                    <span class="srv-card__feat"><i class="ph ph-check"></i> Topic Research</span>
+                    <span class="srv-card__feat"><i class="ph ph-check"></i> Caption Copywriting</span>
+                    <span class="srv-card__feat"><i class="ph ph-check"></i> Scheduling & Publishing</span>
+                  </div>
+                  <a class="btn btn-anim btn-default btn-outline slide-right-up" href="contact.html" style="align-self:flex-start;">
+                    <span class="btn-caption">Get Started</span>
+                    <i class="ph-bold ph-arrow-up-right"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+
+            <!-- 02 Video Editing Services -->
+            <div class="srv-card anim-uni-in-up">
+              <div class="srv-card__inner-wrap">
+                <div class="srv-card__visual srv-card__visual--photo">
+                  <img src="img/services/service-video.jpg" alt="Video Editing">
+                  <div class="srv-card__overlay"></div>
+                  <span class="srv-card__num">02</span>
+                  <span class="srv-card__tag">Video</span>
+                  <div class="srv-card__name-overlay">Video Editing<br>Services</div>
+                </div>
+                <div class="srv-card__body">
+                  <p class="srv-card__descr">Raw footage transformed into premium, share-worthy videos. Reels, TikToks, brand films, product showcases — with motion graphics, captions, music, and colour grading done right.</p>
+                  <div class="srv-card__features">
+                    <span class="srv-card__feat"><i class="ph ph-check"></i> Short-Form Reels & TikToks</span>
+                    <span class="srv-card__feat"><i class="ph ph-check"></i> Motion Graphics</span>
+                    <span class="srv-card__feat"><i class="ph ph-check"></i> Colour Grading</span>
+                    <span class="srv-card__feat"><i class="ph ph-check"></i> Captions & Subtitles</span>
+                  </div>
+                  <a class="btn btn-anim btn-default btn-outline slide-right-up" href="contact.html" style="align-self:flex-start;">
+                    <span class="btn-caption">Get Started</span>
+                    <i class="ph-bold ph-arrow-up-right"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+
+            <!-- 03 Content Creation — Organic & Meta Ads (WIDE) -->
+            <div class="srv-card srv-card--wide anim-uni-in-up">
+              <div class="srv-card__inner-wrap">
+                <div class="srv-card__visual srv-card__visual--obj">
+                  <img src="img/3D_Object/Meta_Ads.png" alt="Content Creation">
+                  <span class="srv-card__num">03</span>
+                  <span class="srv-card__tag">Content</span>
+                </div>
+                <div class="srv-card__body" style="justify-content:center;">
+                  <p style="font-size: clamp(2.2rem, 2.8vw, 3.4rem); font-family:'Funnel Display',sans-serif; font-weight:800; line-height:1.1; margin-bottom:2rem;">Content Creation<br><span style="color:var(--additional);">Organic & Meta Ads</span></p>
+                  <p class="srv-card__descr">Two content tracks — organic to grow your community and ad creatives to drive conversions. We produce scroll-stopping visuals, captions, and videos engineered for each platform and objective.</p>
+                  <div class="srv-card__features">
+                    <span class="srv-card__feat"><i class="ph ph-check"></i> Organic Social Content</span>
+                    <span class="srv-card__feat"><i class="ph ph-check"></i> Meta Ad Creatives</span>
+                    <span class="srv-card__feat"><i class="ph ph-check"></i> Image, Video & Carousel</span>
+                    <span class="srv-card__feat"><i class="ph ph-check"></i> Platform-Optimised Formats</span>
+                  </div>
+                  <a class="btn btn-anim btn-default btn-outline slide-right-up" href="contact.html" style="align-self:flex-start;">
+                    <span class="btn-caption">Get Started</span>
+                    <i class="ph-bold ph-arrow-up-right"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+
+            <!-- 04 Paid Ads Management (WIDE) -->
+            <div class="srv-card srv-card--wide anim-uni-in-up">
+              <div class="srv-card__inner-wrap">
+                <div class="srv-card__visual srv-card__visual--photo" style="order:2;">
+                  <img src="img/services/service-ads.jpg" alt="Paid Ads">
+                  <div class="srv-card__overlay"></div>
+                  <span class="srv-card__num">04</span>
+                  <span class="srv-card__tag" style="right:auto; left:2.4rem;">Paid Ads</span>
+                  <div class="srv-card__name-overlay">Paid Ads<br>Management</div>
+                </div>
+                <div class="srv-card__body" style="justify-content:center; order:1;">
+                  <p style="font-size: clamp(2.2rem, 2.8vw, 3.4rem); font-family:'Funnel Display',sans-serif; font-weight:800; line-height:1.1; margin-bottom:2rem;">Every ringgit<br>working harder.</p>
+                  <p class="srv-card__descr">We manage Meta, TikTok, and Google campaigns from strategy to daily optimisation — audience research, A/B testing, budget allocation, and transparent monthly reporting.</p>
+                  <div class="srv-card__features">
+                    <span class="srv-card__feat"><i class="ph ph-check"></i> Meta Ads</span>
+                    <span class="srv-card__feat"><i class="ph ph-check"></i> TikTok Ads</span>
+                    <span class="srv-card__feat"><i class="ph ph-check"></i> Google Ads</span>
+                    <span class="srv-card__feat"><i class="ph ph-check"></i> Daily Optimisation</span>
+                    <span class="srv-card__feat"><i class="ph ph-check"></i> Monthly Reporting</span>
+                  </div>
+                  <a class="btn btn-anim btn-default btn-additional slide-right-up" href="contact.html" style="align-self:flex-start;">
+                    <span class="btn-caption">Start Advertising</span>
+                    <i class="ph-bold ph-arrow-up-right"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+
+            <!-- 05 Graphic Motion Video -->
+            <div class="srv-card anim-uni-in-up">
+              <div class="srv-card__inner-wrap">
+                <div class="srv-card__visual srv-card__visual--obj" style="background: rgba(20,20,20,0.6);">
+                  <img src="img/3D_Object/3d object (2).png" alt="Motion Graphics">
+                  <span class="srv-card__num">05</span>
+                  <span class="srv-card__tag">Motion</span>
+                </div>
+                <div class="srv-card__body">
+                  <p style="font-size: clamp(2rem, 2.2vw, 2.8rem); font-family:'Funnel Display',sans-serif; font-weight:800; line-height:1.1; margin-bottom:1.6rem;">Graphic Motion<br>Video Service</p>
+                  <p class="srv-card__descr">Animated graphics, kinetic text, logo animations, and explainer videos that are visually striking and built for social media and ad campaigns.</p>
+                  <div class="srv-card__features">
+                    <span class="srv-card__feat"><i class="ph ph-check"></i> Logo Animation</span>
+                    <span class="srv-card__feat"><i class="ph ph-check"></i> Kinetic Typography</span>
+                    <span class="srv-card__feat"><i class="ph ph-check"></i> Explainer Videos</span>
+                  </div>
+                  <a class="btn btn-anim btn-default btn-outline slide-right-up" href="contact.html" style="align-self:flex-start;">
+                    <span class="btn-caption">Get Started</span>
+                    <i class="ph-bold ph-arrow-up-right"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+
+            <!-- 06 Talent Management -->
+            <div class="srv-card anim-uni-in-up">
+              <div class="srv-card__inner-wrap">
+                <div class="srv-card__visual srv-card__visual--obj" style="background: rgba(255,255,255,0.03);">
+                  <img src="img/3D_Object/Astronaut.png" alt="Talent Management">
+                  <span class="srv-card__num">06</span>
+                  <span class="srv-card__tag">Talent</span>
+                </div>
+                <div class="srv-card__body">
+                  <p style="font-size: clamp(2rem, 2.2vw, 2.8rem); font-family:'Funnel Display',sans-serif; font-weight:800; line-height:1.1; margin-bottom:1.6rem;">Talent Management<br>Service</p>
+                  <p class="srv-card__descr">We connect brands with the right creators and manage the full collaboration — scouting, briefing, content delivery, and performance tracking. Micro-influencers, brand ambassadors, UGC creators.</p>
+                  <div class="srv-card__features">
+                    <span class="srv-card__feat"><i class="ph ph-check"></i> Influencer Scouting</span>
+                    <span class="srv-card__feat"><i class="ph ph-check"></i> UGC Creators</span>
+                    <span class="srv-card__feat"><i class="ph ph-check"></i> Campaign Management</span>
+                  </div>
+                  <a class="btn btn-anim btn-default btn-outline slide-right-up" href="contact.html" style="align-self:flex-start;">
+                    <span class="btn-caption">Get Started</span>
+                    <i class="ph-bold ph-arrow-up-right"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+
+            <!-- 07 Social Media Management (WIDE) -->
+            <div class="srv-card srv-card--wide anim-uni-in-up">
+              <div class="srv-card__inner-wrap">
+                <div class="srv-card__visual srv-card__visual--obj" style="background: rgba(255,255,255,0.03);">
+                  <img src="img/3D_Object/Social_Media.png" alt="Social Media">
+                  <span class="srv-card__num">07</span>
+                  <span class="srv-card__tag">Social</span>
+                </div>
+                <div class="srv-card__body" style="justify-content:center;">
+                  <p style="font-size: clamp(2.2rem, 2.8vw, 3.4rem); font-family:'Funnel Display',sans-serif; font-weight:800; line-height:1.1; margin-bottom:2rem;">Social Media<br>Management Services</p>
+                  <p class="srv-card__descr">Full end-to-end management of your Instagram, Facebook, and TikTok. Content scheduling, community engagement, DM responses, trend monitoring, and monthly reporting — your brand stays active and growing.</p>
+                  <div class="srv-card__features">
+                    <span class="srv-card__feat"><i class="ph ph-check"></i> Instagram & Facebook</span>
+                    <span class="srv-card__feat"><i class="ph ph-check"></i> TikTok Management</span>
+                    <span class="srv-card__feat"><i class="ph ph-check"></i> Community Engagement</span>
+                    <span class="srv-card__feat"><i class="ph ph-check"></i> Monthly Reports</span>
+                  </div>
+                  <a class="btn btn-anim btn-default btn-outline slide-right-up" href="contact.html" style="align-self:flex-start;">
+                    <span class="btn-caption">Get Started</span>
+                    <i class="ph-bold ph-arrow-up-right"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+
+            <!-- 08 Poster Design -->
+            <div class="srv-card anim-uni-in-up">
+              <div class="srv-card__inner-wrap">
+                <div class="srv-card__visual srv-card__visual--photo">
+                  <img src="img/3D_Object/poster.png" alt="Poster Design">
+                  <div class="srv-card__overlay"></div>
+                  <span class="srv-card__num">08</span>
+                  <span class="srv-card__tag">Design</span>
+                  <div class="srv-card__name-overlay">Poster Design<br>Service</div>
+                </div>
+                <div class="srv-card__body">
+                  <p class="srv-card__descr">Bold, clean, on-brand. From festive posters and promotional flyers to social announcements — we design visuals that stop the scroll and communicate instantly.</p>
+                  <div class="srv-card__features">
+                    <span class="srv-card__feat"><i class="ph ph-check"></i> Social Posters</span>
+                    <span class="srv-card__feat"><i class="ph ph-check"></i> Promotional Flyers</span>
+                    <span class="srv-card__feat"><i class="ph ph-check"></i> Event Artwork</span>
+                    <span class="srv-card__feat"><i class="ph ph-check"></i> Festive Campaigns</span>
+                  </div>
+                  <a class="btn btn-anim btn-default btn-outline slide-right-up" href="contact.html" style="align-self:flex-start;">
+                    <span class="btn-caption">Get Started</span>
+                    <i class="ph-bold ph-arrow-up-right"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+
+            <!-- 09 Website Development -->
+            <div class="srv-card anim-uni-in-up">
+              <div class="srv-card__inner-wrap">
+                <div class="srv-card__visual srv-card__visual--obj" style="background: rgba(20,20,20,0.6);">
+                  <img src="img/3D_Object/Astronaut02.png" alt="Website Development">
+                  <span class="srv-card__num">09</span>
+                  <span class="srv-card__tag">Web</span>
+                </div>
+                <div class="srv-card__body">
+                  <p style="font-size: clamp(2rem, 2.2vw, 2.8rem); font-family:'Funnel Display',sans-serif; font-weight:800; line-height:1.1; margin-bottom:1.6rem;">Website Development<br>Service</p>
+                  <p class="srv-card__descr">Your 24/7 digital salesperson. We build fast, mobile-optimised websites — landing pages, business profiles, and e-commerce stores — that look great and convert visitors into customers.</p>
+                  <div class="srv-card__features">
+                    <span class="srv-card__feat"><i class="ph ph-check"></i> Landing Pages</span>
+                    <span class="srv-card__feat"><i class="ph ph-check"></i> Business Profile Sites</span>
+                    <span class="srv-card__feat"><i class="ph ph-check"></i> E-Commerce</span>
+                  </div>
+                  <a class="btn btn-anim btn-default btn-outline slide-right-up" href="contact.html" style="align-self:flex-start;">
+                    <span class="btn-caption">Get Started</span>
+                    <i class="ph-bold ph-arrow-up-right"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+
+          </div>
+        </div>
+      </div>
+      <!-- Services Grid End -->
+
+
+      <!-- Partners -->
+      <div class="mxd-section padding-pre-grid">
+        <div class="mxd-container grid-container">
+          <div class="mxd-block">
+            <div class="container-fluid px-0">
+              <div class="row g-0">
+                <div class="col-12 col-xl-6 mxd-grid-item no-margin">
+                  <div class="mxd-section-title__hrtitle anim-uni-in-up">
+                    <h2 class="reveal-type">Brands we've helped grow</h2>
+                  </div>
+                </div>
+                <div class="col-12 col-xl-3 mxd-grid-item no-margin">
+                  <p class="anim-uni-in-up" style="opacity: 0.55; padding-top: 1rem;">Proud to have supported these businesses on their journey.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="mxd-block">
+            <div class="mxd-partners-cards">
+              <div class="container-fluid px-0">
+                <div class="row gx-0">
+                  <div class="col-12 col-md-6 col-xl-3 mxd-partners-cards__item mxd-grid-item animate-card-4"><a class="mxd-partners-cards__inner" href="#0"><div class="mxd-partners-cards__logo"><img src="img/brands/logo_Redha-Dental.webp" alt="Redha Dental"></div></a></div>
+                  <div class="col-12 col-md-6 col-xl-3 mxd-partners-cards__item mxd-grid-item animate-card-4"><a class="mxd-partners-cards__inner" href="#0"><div class="mxd-partners-cards__logo"><img src="img/brands/logo_Emerald-Bayu.webp" alt="Emerald Bayu"></div></a></div>
+                  <div class="col-12 col-md-6 col-xl-3 mxd-partners-cards__item mxd-grid-item animate-card-4"><a class="mxd-partners-cards__inner" href="#0"><div class="mxd-partners-cards__logo"><img src="img/brands/logo_Onz-Solar.webp" alt="Onz Solar"></div></a></div>
+                  <div class="col-12 col-md-6 col-xl-3 mxd-partners-cards__item mxd-grid-item animate-card-4"><a class="mxd-partners-cards__inner" href="#0"><div class="mxd-partners-cards__logo"><img src="img/brands/logo_Doi-Chang.webp" alt="Doi Chang"></div></a></div>
+                  <div class="col-12 col-md-6 col-xl-3 mxd-partners-cards__item mxd-grid-item animate-card-4"><a class="mxd-partners-cards__inner" href="#0"><div class="mxd-partners-cards__logo"><img src="img/brands/logo_Premium-Sport-Cycle.webp" alt="Premium Sport Cycle"></div></a></div>
+                  <div class="col-12 col-md-6 col-xl-3 mxd-partners-cards__item mxd-grid-item animate-card-4"><a class="mxd-partners-cards__inner" href="#0"><div class="mxd-partners-cards__logo"><img src="img/brands/logo_Klinik-Utama.webp" alt="Klinik Utama"></div></a></div>
+                  <div class="col-12 col-md-6 col-xl-3 mxd-partners-cards__item mxd-grid-item animate-card-4"><a class="mxd-partners-cards__inner" href="#0"><div class="mxd-partners-cards__logo"><img src="img/brands/logo_Sake-Cha.webp" alt="Sake Cha"></div></a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- CTA -->
+      <div class="mxd-section overflow-hidden" style="padding: 7rem 0 9rem;">
+        <div class="mxd-container grid-container">
+          <div class="mxd-block">
+            <div class="container-fluid px-0">
+              <div class="row gx-0 align-items-center">
+                <div class="col-12 col-xl-7 mxd-grid-item no-margin" style="padding-right: 4rem; padding-bottom: 3rem;">
+                  <p class="mxd-point-subtitle anim-uni-in-up" style="margin-bottom: 2.4rem;">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="20px" height="20px" viewBox="0 0 20 20" fill="currentColor"><path fill="currentColor" d="M19.6,9.6c0,0-3,0-4,0c-0.4,0-1.8-0.2-1.8-0.2c-0.6-0.1-1.1-0.2-1.6-0.6c-0.5-0.3-0.9-0.8-1.2-1.2c-0.3-0.4-0.4-0.9-0.5-1.4c0,0-0.1-1.1-0.2-1.5c-0.1-1.1,0-4.4,0-4.4C10.4,0.2,10.2,0,10,0S9.6,0.2,9.6,0.4c0,0,0.1,3.3,0,4.4c0,0.4-0.2,1.5-0.2,1.5C9.4,6.7,9.2,7.2,9,7.6C8.7,8.1,8.2,8.5,7.8,8.9c-0.5,0.3-1,0.5-1.6,0.6c0,0-1.2,0.1-1.7,0.2c-1,0.1-4.2,0-4.2,0C0.2,9.6,0,9.8,0,10c0,0.2,0.2,0.4,0.4,0.4c0,0,3.1-0.1,4.2,0c0.4,0,1.7,0.2,1.7,0.2c0.6,0.1,1.1,0.2,1.6,0.6c0.4,0.3,0.8,0.7,1.1,1.1c0.3,0.5,0.5,1,0.6,1.6c0,0,0.1,1.3,0.2,1.7c0,1,0,4.1,0,4.1c0,0.2,0.2,0.4,0.4,0.4s0.4-0.2,0.4-0.4c0,0,0-3.1,0-4.1c0-0.4,0.2-1.7,0.2-1.7c0.1-0.6,0.2-1.1,0.6-1.6c0.3-0.4,0.7-0.8,1.1-1.1c0.5-0.3,1-0.5,1.6-0.6c0,0,1.3-0.1,1.8-0.2c1,0,4,0,4,0c0.2,0,0.4-0.2,0.4-0.4C20,9.8,19.8,9.6,19.6,9.6L19.6,9.6z"/></svg>
+                    <span>Let's work together</span>
+                  </p>
+                  <h2 class="reveal-type anim-uni-in-up" style="margin-bottom: 1.8rem; line-height: 1.05;">Not sure which service<br>is right for you?</h2>
+                  <p class="anim-uni-in-up" style="opacity: 0.6; max-width: 420px;">Drop us a message and we'll recommend the best package for your goals and budget. We reply within 24 hours.</p>
+                </div>
+                <div class="col-xl-1 d-none d-xl-flex mxd-grid-item no-margin" style="justify-content:center; align-self:stretch; min-height:180px;">
+                  <div style="width:1px; background:rgba(128,128,128,0.25); margin:0 auto;"></div>
+                </div>
+                <div class="col-12 col-xl-4 mxd-grid-item no-margin anim-uni-in-up" style="display:flex; flex-direction:column; gap:1.5rem; padding-left:4rem;">
+                  <a class="btn btn-anim btn-default btn-large btn-additional slide-right-up" href="contact.html">
+                    <span class="btn-caption">Contact Us</span>
+                    <i class="ph-bold ph-arrow-up-right"></i>
+                  </a>
+                  <a class="btn btn-anim btn-default btn-large btn-outline slide-right-up" href="https://wa.me/601XXXXXXXX" target="_blank" rel="noopener">
+                    <span class="btn-caption">WhatsApp Us</span>
+                    <i class="fa-brands fa-whatsapp"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    </main>
+
+    <!-- Footer -->
+    <footer id="mxd-footer" class="mxd-footer">
+      <div class="mxd-footer__text-wrap">
+        <div class="fullwidth-text__tl-trigger"></div>
+        <div class="mxd-footer__fullwidth-text anim-top-to-bottom"></div>
+      </div>
+      <div class="mxd-footer__footer-blocks">
+        <div class="footer-blocks__column animate-card-3">
+          <div class="footer-blocks__card fullheight-card">
+            <div class="footer-blocks__nav">
+              <ul class="footer-nav">
+                <li class="footer-nav__item anim-uni-in-up"><a href="index.html" class="footer-nav__link btn-anim"><span class="btn-caption">Home</span></a></li>
+                <li class="footer-nav__item anim-uni-in-up"><a href="about-us.html" class="footer-nav__link btn-anim"><span class="btn-caption">About Us</span></a></li>
+                <li class="footer-nav__item anim-uni-in-up"><a href="works-simple.html" class="footer-nav__link btn-anim"><span class="btn-caption">Projects</span></a></li>
+                <li class="footer-nav__item anim-uni-in-up"><a href="services.html" class="footer-nav__link btn-anim"><span class="btn-caption">Services</span></a></li>
+                <li class="footer-nav__item anim-uni-in-up"><a href="blog-article.html" class="footer-nav__link btn-anim"><span class="btn-caption">Articles</span></a></li>
+                <li class="footer-nav__item anim-uni-in-up"><a href="contact.html" class="footer-nav__link btn-anim"><span class="btn-caption">Contact</span></a></li>
+              </ul>
+            </div>
+            <div class="footer-blocks__links anim-uni-in-up">
+              <a class="btn btn-line-xsmall btn-muted slide-right anim-no-delay" href="#0"><span class="btn-caption">Privacy Policy</span><i class="ph ph-arrow-right"></i></a>
+              <a class="btn btn-line-xsmall btn-muted slide-right anim-no-delay" href="#0"><span class="btn-caption">Terms & Conditions</span><i class="ph ph-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-blocks__column animate-card-3">
+          <div class="footer-blocks__card">
+            <p class="mxd-point-subtitle anim-uni-in-up">
+              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="20px" height="20px" viewBox="0 0 20 20" fill="currentColor"><path fill="currentColor" d="M19.6,9.6c0,0-3,0-4,0c-0.4,0-1.8-0.2-1.8-0.2c-0.6-0.1-1.1-0.2-1.6-0.6c-0.5-0.3-0.9-0.8-1.2-1.2c-0.3-0.4-0.4-0.9-0.5-1.4c0,0-0.1-1.1-0.2-1.5c-0.1-1.1,0-4.4,0-4.4C10.4,0.2,10.2,0,10,0S9.6,0.2,9.6,0.4c0,0,0.1,3.3,0,4.4c0,0.4-0.2,1.5-0.2,1.5C9.4,6.7,9.2,7.2,9,7.6C8.7,8.1,8.2,8.5,7.8,8.9c-0.5,0.3-1,0.5-1.6,0.6c0,0-1.2,0.1-1.7,0.2c-1,0.1-4.2,0-4.2,0C0.2,9.6,0,9.8,0,10c0,0.2,0.2,0.4,0.4,0.4c0,0,3.1-0.1,4.2,0c0.4,0,1.7,0.2,1.7,0.2c0.6,0.1,1.1,0.2,1.6,0.6c0.4,0.3,0.8,0.7,1.1,1.1c0.3,0.5,0.5,1,0.6,1.6c0,0,0.1,1.3,0.2,1.7c0,1,0,4.1,0,4.1c0,0.2,0.2,0.4,0.4,0.4s0.4-0.2,0.4-0.4c0,0,0-3.1,0-4.1c0-0.4,0.2-1.7,0.2-1.7c0.1-0.6,0.2-1.1,0.6-1.6c0.3-0.4,0.7-0.8,1.1-1.1c0.5-0.3,1-0.5,1.6-0.6c0,0,1.3-0.1,1.8-0.2c1,0,4,0,4,0c0.2,0,0.4-0.2,0.4-0.4C20,9.8,19.8,9.6,19.6,9.6L19.6,9.6z"/></svg>
+              <a href="mailto:sales@starthink.net?subject=Project%20Enquiry">sales@starthink.net</a>
+            </p>
+          </div>
+          <div class="footer-blocks__card">
+            <p class="mxd-point-subtitle anim-uni-in-up">
+              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="20px" height="20px" viewBox="0 0 20 20" fill="currentColor"><path fill="currentColor" d="M19.6,9.6c0,0-3,0-4,0c-0.4,0-1.8-0.2-1.8-0.2c-0.6-0.1-1.1-0.2-1.6-0.6c-0.5-0.3-0.9-0.8-1.2-1.2c-0.3-0.4-0.4-0.9-0.5-1.4c0,0-0.1-1.1-0.2-1.5c-0.1-1.1,0-4.4,0-4.4C10.4,0.2,10.2,0,10,0S9.6,0.2,9.6,0.4c0,0,0.1,3.3,0,4.4c0,0.4-0.2,1.5-0.2,1.5C9.4,6.7,9.2,7.2,9,7.6C8.7,8.1,8.2,8.5,7.8,8.9c-0.5,0.3-1,0.5-1.6,0.6c0,0-1.2,0.1-1.7,0.2c-1,0.1-4.2,0-4.2,0C0.2,9.6,0,9.8,0,10c0,0.2,0.2,0.4,0.4,0.4c0,0,3.1-0.1,4.2,0c0.4,0,1.7,0.2,1.7,0.2c0.6,0.1,1.1,0.2,1.6,0.6c0.4,0.3,0.8,0.7,1.1,1.1c0.3,0.5,0.5,1,0.6,1.6c0,0,0.1,1.3,0.2,1.7c0,1,0,4.1,0,4.1c0,0.2,0.2,0.4,0.4,0.4s0.4-0.2,0.4-0.4c0,0,0-3.1,0-4.1c0-0.4,0.2-1.7,0.2-1.7c0.1-0.6,0.2-1.1,0.6-1.6c0.3-0.4,0.7-0.8,1.1-1.1c0.5-0.3,1-0.5,1.6-0.6c0,0,1.3-0.1,1.8-0.2c1,0,4,0,4,0c0.2,0,0.4-0.2,0.4-0.4C20,9.8,19.8,9.6,19.6,9.6L19.6,9.6z"/></svg>
+              <a href="tel:+60122646895">+60 12 264 6895</a>
+            </p>
+          </div>
+          <div class="footer-blocks__card fill-card">
+            <div class="footer-blocks__title anim-uni-in-up"><p class="footer-blocks__title-m">Our Office:</p></div>
+            <div class="anim-uni-in-up"><p class="footer-blocks__text">No. 44-2, 1st Floor, Jln USJ 9/5P,<br>Subang Business Centre,<br>47620 Subang Jaya, Selangor</p></div>
+          </div>
+        </div>
+        <div class="footer-blocks__column animate-card-3">
+          <div class="footer-blocks__card fullheight-card">
+            <div class="footer-blocks__block">
+              <div class="footer-blocks__title anim-uni-in-up"><p class="footer-blocks__title-l">Follow Us</p></div>
+              <div class="footer-blocks__socials">
+                <ul class="footer-socials">
+                  <li class="footer-socials__item anim-uni-in-up"><a href="https://www.instagram.com/starthink_my/" class="footer-socials__link" target="_blank">Instagram</a></li>
+                  <li class="footer-socials__item anim-uni-in-up"><a href="https://www.facebook.com/profile.php?id=61580456730158" class="footer-socials__link" target="_blank">Facebook</a></li>
+                  <li class="footer-socials__item anim-uni-in-up"><a href="https://www.tiktok.com/@starthink_my" class="footer-socials__link" target="_blank">TikTok</a></li>
+                  <li class="footer-socials__item anim-uni-in-up"><a href="https://www.threads.com/@starthink_my" class="footer-socials__link" target="_blank">Threads</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="footer-blocks__links anim-uni-in-up">
+              <p class="t-xsmall t-muted">StarThink <i class="ph-bold ph-copyright"></i> 2026</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <a href="#0" id="to-top" class="btn btn-to-top slide-up anim-no-delay"><i class="ph ph-arrow-up"></i></a>
+
+    <script src="js/libs.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/particles.js"></script>
+
+  </body>
+
+</html>
