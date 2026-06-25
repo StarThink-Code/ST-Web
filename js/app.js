@@ -69,41 +69,31 @@ const loadingWrap = document.querySelector('.loading-wrap');
 const loadingItems = loadingWrap.querySelectorAll('.loading__item');
 const fadeInItems = document.querySelectorAll('.loading__fade');
 
-// Letter-by-letter drop reveal
-gsap.to(".loader__letter", {
-  opacity: 1,
-  y: 0,
-  duration: 0.55,
-  stagger: 0.07,
-  ease: "back.out(1.7)",
-  delay: 0.4,
-  startAt: { y: -50, opacity: 0 }
-});
-// Tagline fades in after all letters land
-gsap.to(".loader__tagline", {
-  opacity: 1,
-  y: 0,
-  duration: 0.7,
-  ease: "power2.out",
-  delay: 1.35,
-  startAt: { y: 12, opacity: 0 }
-});
-
 imgLoad.on('done', instance => {
   hideLoader();
   pageAppearance();
 });
 
 function hideLoader() {
-  gsap.to("#loader", {
-    opacity: 0,
-    duration: 0.8,
-    ease: 'power2.inOut',
-    delay: 0.8,
-    onComplete: () => {
-      document.getElementById("loader").classList.add("loaded");
-    }
-  });
+  var panelTop    = document.querySelector('.loader__panel--top');
+  var panelBottom = document.querySelector('.loader__panel--bottom');
+  var brand       = document.querySelector('.loader__brand');
+  var loaderEl    = document.getElementById('loader');
+
+  // Ensure at least one letter cycle is visible before exiting
+  setTimeout(function () {
+    if (panelTop)    panelTop.style.transform    = 'translateY(-100%)';
+    if (panelBottom) panelBottom.style.transform  = 'translateY(100%)';
+    if (brand)       brand.style.opacity          = '0';
+  }, 600);
+
+  setTimeout(function () {
+    loaderEl.style.transition = 'opacity 0.4s ease';
+    loaderEl.style.opacity    = '0';
+    setTimeout(function () {
+      loaderEl.classList.add('loaded');
+    }, 400);
+  }, 1200);
 }
 
 function pageAppearance() {

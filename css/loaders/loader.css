@@ -301,77 +301,124 @@
 /* ------------------------------------------------*/
 .loader {
   position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+  inset: 0;
   z-index: 1000;
-}
-.loader.loaded {
-  opacity: 0;
-  visibility: hidden;
-}
-
-.loader__wrapper {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  background: #0D0D0D;
-  overflow: hidden;
+  background: #000;
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
+}
+.loader.loaded {
+  display: none;
 }
 
-.loader__content {
-  position: relative;
-  z-index: 2;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1.6rem;
+/* Split panels that fly off screen on exit */
+.loader__panel {
+  position: absolute;
+  width: 100%;
+  height: 50%;
+  background: #111;
+  transition: transform 1s ease-in-out;
+  z-index: 5;
 }
+.loader__panel--top    { top: 0; }
+.loader__panel--bottom { bottom: 0; }
 
+/* Letter container */
 .loader__brand {
+  position: relative;
   display: flex;
-  align-items: baseline;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  width: 90vw;
+  max-width: 820px;
   font-family: "Funnel Display", sans-serif;
+  font-size: clamp(28px, 8vw, 96px);
   font-weight: 800;
-  font-size: 5rem;
-  line-height: 1;
-  letter-spacing: -0.03em;
+  letter-spacing: 0.06em;
+  user-select: none;
+  color: #fff;
+  transition: opacity 0.8s ease;
 }
 
+/* Animated colour-light stripe overlay */
+.loader__light {
+  position: absolute;
+  top: 0; left: 0;
+  height: 100%; width: 100%;
+  z-index: 1;
+  background-color: transparent;
+  mask: repeating-linear-gradient(
+    90deg,
+    transparent 0, transparent 6px,
+    #89F336 6px, #89F336 9px
+  );
+  -webkit-mask: repeating-linear-gradient(
+    90deg,
+    transparent 0, transparent 6px,
+    #89F336 6px, #89F336 9px
+  );
+}
+
+.loader__light::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-image:
+    radial-gradient(circle at 50% 50%, #89F336 0%, transparent 50%),
+    radial-gradient(circle at 45% 45%, #DDF160 0%, transparent 45%),
+    radial-gradient(circle at 55% 55%, #89F336 0%, transparent 45%),
+    radial-gradient(circle at 45% 55%, #DDF160 0%, transparent 45%),
+    radial-gradient(circle at 55% 45%, #1a4a00 0%, transparent 45%);
+  mask: radial-gradient(circle at 50% 50%, transparent 0%, transparent 10%, black 25%);
+  -webkit-mask: radial-gradient(circle at 50% 50%, transparent 0%, transparent 10%, black 25%);
+  animation: loader-light-slide 2s infinite alternate, loader-light-fade 4s infinite;
+  animation-timing-function: cubic-bezier(0.6, 0.8, 0.5, 1);
+}
+
+@keyframes loader-light-slide {
+  0%   { transform: translate(-55%); }
+  100% { transform: translate(55%);  }
+}
+
+@keyframes loader-light-fade {
+  0%, 100% { opacity: 0; }
+  15%       { opacity: 1; }
+  65%       { opacity: 0; }
+}
+
+/* Individual letter pulse animation */
 .loader__letter {
   display: inline-block;
-  color: #FFFFFF;
   opacity: 0;
+  animation: loader-letter-anim 4s infinite linear;
+  z-index: 2;
 }
 
-.loader__letter--green {
-  color: #89F336;
+.loader__letter:nth-child(1) { animation-delay: 0.10s; }
+.loader__letter:nth-child(2) { animation-delay: 0.21s; }
+.loader__letter:nth-child(3) { animation-delay: 0.31s; }
+.loader__letter:nth-child(4) { animation-delay: 0.42s; }
+.loader__letter:nth-child(5) { animation-delay: 0.52s; }
+.loader__letter:nth-child(6) { animation-delay: 0.63s; }
+.loader__letter:nth-child(7) { animation-delay: 0.73s; }
+.loader__letter:nth-child(8) { animation-delay: 0.84s; }
+.loader__letter:nth-child(9) { animation-delay: 0.94s; }
+
+@keyframes loader-letter-anim {
+  0%   { opacity: 0; filter: blur(0px); }
+  5%   { opacity: 1; filter: blur(0px); transform: scale(1.1) translateY(-2px);
+         text-shadow: 0 0 12px rgba(137, 243, 54, 0.7); }
+  20%  { opacity: 0.2; filter: blur(0px); }
+  100% { opacity: 0; filter: blur(5px); }
 }
 
-.loader__tagline {
-  font-family: "Funnel Sans", sans-serif;
-  font-size: 0.72rem;
-  font-weight: 400;
-  color: rgba(255, 255, 255, 0.38);
-  letter-spacing: 0.32em;
-  text-transform: uppercase;
-  margin: 0;
-  opacity: 0;
-}
-
-
-@media only screen and (min-width: 768px) {
-  .loader__brand { font-size: 8rem; }
-}
-@media only screen and (min-width: 1200px) {
-  .loader__brand { font-size: 11rem; }
-}
-@media only screen and (min-width: 1600px) {
-  .loader__brand { font-size: 14rem; }
+@media (prefers-reduced-motion: reduce) {
+  .loader__letter      { animation: none; opacity: 1; }
+  .loader__light::after { animation: none; }
 }
 /* ------------------------------------------------*/
 /* Loader Styles End */
