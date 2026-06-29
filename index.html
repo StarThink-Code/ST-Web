@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en" dir="ltr">
 
   <head>
@@ -16,6 +16,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 
+        <!-- DNS Preconnect for CDN resources -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
     <!-- Favicon & Icons Start -->
     <link rel="icon" href="img/logo/faviocn.png" type="image/png">
     <link rel="apple-touch-icon" href="img/logo/faviocn.png">
@@ -32,12 +36,13 @@
 
     <!-- Template Styles Start -->
     <link rel="stylesheet" type="text/css" href="css/loaders/loader.css">
-    <link rel="stylesheet" type="text/css" href="css/plugins.css">
+    <link rel="stylesheet" type="text/css" href="css/plugins.min.css">
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <!-- Template Styles End -->
 
     <!-- Font Awesome Brands -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"></noscript>
 
     <!-- Custom Browser Color Start -->
     <meta name="theme-color" content="#0D0D0D">
@@ -45,6 +50,9 @@
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <!-- Custom Browser Color End -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Funnel+Sans:ital,wght@0,300..800;1,300..800&display=swap">
     
   </head>
 
@@ -280,7 +288,7 @@
                         </a>
                       </div>
                       <div class="mxd-stats-cards__image mxd-stats-cards-image-1">
-                        <img src="img/team/team.webp" alt="StarThink Team">
+                        <img loading="lazy" src="img/team/team.webp" alt="StarThink Team">
                       </div>
                     </div>
                   </div>
@@ -290,7 +298,7 @@
                       <div class="mxd-stats-cards__btngroup">
                         <div class="mxd-avatars">
                           <div class="mxd-avatars__item">
-                            <img src="img/testimonials/Mohd Hisham.png" alt="Avatar">
+                            <img loading="lazy" src="img/testimonials/Mohd Hisham.png" alt="Avatar">
                           </div>
                           <div class="mxd-avatars__item bg-base-opp">
                             <svg class="mxd-avatars__icon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -310,7 +318,7 @@
                             </svg>
                           </div>
                           <div class="mxd-avatars__item">
-                            <img src="img/testimonials/Syed Shatri.png" alt="Avatar">
+                            <img loading="lazy" src="img/testimonials/Syed Shatri.png" alt="Avatar">
                           </div>
                         </div>
                       </div>
@@ -319,7 +327,7 @@
                         <p class="mxd-counter__descr t-140 t-bright">Five-star reviews from<br>happy clients</p>
                       </div>
                       <div class="mxd-stats-cards__image mxd-stats-cards-image-2">
-                        <img src="img/3D_Object/starship.png" alt="Creative Work">
+                        <img loading="lazy" src="img/3D_Object/starship.png" alt="Creative Work">
                       </div>
                     </div>
                   </div>
@@ -337,7 +345,7 @@
                         </a>
                       </div>
                       <div class="mxd-stats-cards__image mxd-stats-cards-image-3">
-                        <img src="img/3D_Object/Astronaut.png" alt="Experience">
+                        <img loading="lazy" src="img/3D_Object/Astronaut.png" alt="Experience">
                       </div>
                     </div>
                   </div> 
@@ -355,7 +363,7 @@
                         </a>
                       </div>
                       <div class="mxd-stats-cards__image mxd-stats-cards-image-4">
-                        <img src="img/3D_Object/camera.png" alt="Content Creation">
+                        <img loading="lazy" src="img/3D_Object/camera.png" alt="Content Creation">
                       </div>
                     </div>
                   </div>
@@ -513,7 +521,7 @@
                     <div class="row gx-0">
                       <div class="col-12 col-xl-2 mxd-grid-item no-margin">
                         <div class="mxd-approach-list__image anim-uni-in-up">
-                          <img src="img/3D_Object/wood.webp" alt="Icon">
+                          <img loading="lazy" src="img/3D_Object/wood.webp" alt="Icon">
                         </div>
                       </div>
                       <div class="col-12 col-xl-4 mxd-grid-item no-margin">
@@ -540,7 +548,7 @@
                     <div class="row gx-0">
                       <div class="col-12 col-xl-2 mxd-grid-item no-margin">
                         <div class="mxd-approach-list__image anim-uni-in-up">
-                          <img src="img/3D_Object/obj.webp" alt="Icon">
+                          <img loading="lazy" src="img/3D_Object/obj.webp" alt="Icon">
                         </div>
                       </div>
                       <div class="col-12 col-xl-4 mxd-grid-item no-margin">
@@ -567,7 +575,7 @@
                     <div class="row gx-0">
                       <div class="col-12 col-xl-2 mxd-grid-item no-margin">
                         <div class="mxd-approach-list__image anim-uni-in-up">
-                          <img src="img/3D_Object/wood.webp" alt="Icon">
+                          <img loading="lazy" src="img/3D_Object/wood.webp" alt="Icon">
                         </div>
                       </div>
                       <div class="col-12 col-xl-4 mxd-grid-item no-margin">
@@ -594,7 +602,7 @@
                     <div class="row gx-0">
                       <div class="col-12 col-xl-2 mxd-grid-item no-margin">
                         <div class="mxd-approach-list__image anim-uni-in-up">
-                          <img src="img/3D_Object/obj.webp" alt="Icon">
+                          <img loading="lazy" src="img/3D_Object/obj.webp" alt="Icon">
                         </div>
                       </div>
                       <div class="col-12 col-xl-4 mxd-grid-item no-margin">
@@ -621,7 +629,7 @@
                     <div class="row gx-0">
                       <div class="col-12 col-xl-2 mxd-grid-item no-margin">
                         <div class="mxd-approach-list__image anim-uni-in-up">
-                          <img src="img/3D_Object/wood.webp" alt="Icon">
+                          <img loading="lazy" src="img/3D_Object/wood.webp" alt="Icon">
                         </div>
                       </div>
                       <div class="col-12 col-xl-4 mxd-grid-item no-margin">
@@ -659,7 +667,7 @@
                 <!-- item -->
                 <div class="marquee__item image">
                   <a class="marquee__link" href="works-simple.html">
-                    <img src="img/works/POSTER-01.jpg" alt="StarThink Christmas Campaign">
+                    <img loading="lazy" src="img/works/POSTER-01.jpg" alt="StarThink Christmas Campaign">
                   </a>
                 </div>
                 <!-- item -->
@@ -669,13 +677,13 @@
                 <!-- item -->
                 <div class="marquee__item">
                   <a class="marquee__link" href="works-simple.html">
-                    <img src="img/works/POSTER-02.jpg" alt="StarThink Hello 2026">
+                    <img loading="lazy" src="img/works/POSTER-02.jpg" alt="StarThink Hello 2026">
                   </a>
                 </div>
                 <!-- item -->
                 <div class="marquee__item">
                   <a class="marquee__link" href="works-simple.html">
-                    <img src="img/works//POSTER-03.jpg" alt="Lead Generation Campaign">
+                    <img loading="lazy" src="img/works//POSTER-03.jpg" alt="Lead Generation Campaign">
                   </a>
                 </div>
                 <!-- item -->
@@ -685,7 +693,7 @@
                 <!-- item -->
                 <div class="marquee__item">
                   <a class="marquee__link" href="works-simple.html">
-                    <img src="img/works//POSTER-04.jpg" alt="Hari Raya Creative">
+                    <img loading="lazy" src="img/works//POSTER-04.jpg" alt="Hari Raya Creative">
                   </a>
                 </div>
               </div>
@@ -698,13 +706,13 @@
                 <!-- item -->
                 <div class="marquee__item">
                   <a class="marquee__link" href="works-simple.html">
-                    <img src="img/works/POSTER-05.webp" alt="Eid Mubarak Client Poster">
+                    <img loading="lazy" src="img/works/POSTER-05.webp" alt="Eid Mubarak Client Poster">
                   </a>
                 </div>
                 <!-- item -->
                 <div class="marquee__item">
                   <a class="marquee__link" href="works-simple.html">
-                    <img src="img/works/POSTER-08.png" alt="Paid Ads Campaign">
+                    <img loading="lazy" src="img/works/POSTER-08.png" alt="Paid Ads Campaign">
                   </a>
                 </div>
                 <!-- item -->
@@ -714,13 +722,13 @@
                 <!-- item -->
                 <div class="marquee__item">
                   <a class="marquee__link" href="works-simple.html">
-                    <img src="img/works/POSTER-04.jpg" alt="StarThink Hello 2026">
+                    <img loading="lazy" src="img/works/POSTER-04.jpg" alt="StarThink Hello 2026">
                   </a>
                 </div>
                 <!-- item -->
                 <div class="marquee__item">
                   <a class="marquee__link" href="works-simple.html">
-                    <img src="img/works/POSTER-02.jpg" alt="StarThink Christmas Campaign">
+                    <img loading="lazy" src="img/works/POSTER-02.jpg" alt="StarThink Christmas Campaign">
                   </a>
                 </div>
               </div>
@@ -800,7 +808,7 @@
                             <div class="mxd-testimonials-card__content">
                               <div class="mxd-testimonials-card__media anim-uni-in-up">
                                 <div class="mxd-testimonials-card__photo">
-                                  <img src="img/testimonials/Syed Shatri.png" alt="Syed Shatri">
+                                  <img loading="lazy" src="img/testimonials/Syed Shatri.png" alt="Syed Shatri">
                                 </div>
                                 <div class="mxd-testimonials-card__company">
                                   <span style="font-size:1.2rem; color:#FBBC05; letter-spacing:0.05em;">★★★★★</span>
@@ -822,7 +830,7 @@
                             <div class="mxd-testimonials-card__content">
                               <div class="mxd-testimonials-card__media anim-uni-in-up">
                                 <div class="mxd-testimonials-card__photo">
-                                  <img src="https://ui-avatars.com/api/?name=Mohd+Syazwan&background=89F336&color=000000&bold=true&size=300" alt="Mohd Syazwan Hisham">
+                                  <img loading="lazy" src="https://ui-avatars.com/api/?name=Mohd+Syazwan&background=89F336&color=000000&bold=true&size=300" alt="Mohd Syazwan Hisham">
                                 </div>
                                 <div class="mxd-testimonials-card__company">
                                   <span style="font-size:1.2rem; color:#FBBC05; letter-spacing:0.05em;">★★★★★</span>
@@ -844,7 +852,7 @@
                             <div class="mxd-testimonials-card__content">
                               <div class="mxd-testimonials-card__media anim-uni-in-up">
                                 <div class="mxd-testimonials-card__photo">
-                                  <img src="https://ui-avatars.com/api/?name=Atikah+Syafiqah&background=89F336&color=000000&bold=true&size=300" alt="Atikah Syafiqah">
+                                  <img loading="lazy" src="https://ui-avatars.com/api/?name=Atikah+Syafiqah&background=89F336&color=000000&bold=true&size=300" alt="Atikah Syafiqah">
                                 </div>
                                 <div class="mxd-testimonials-card__company">
                                   <span style="font-size:1.2rem; color:#FBBC05; letter-spacing:0.05em;">★★★★★</span>
@@ -866,7 +874,7 @@
                             <div class="mxd-testimonials-card__content">
                               <div class="mxd-testimonials-card__media anim-uni-in-up">
                                 <div class="mxd-testimonials-card__photo">
-                                  <img src="img/testimonials/Mohd Hisham.png" alt="Mohd Hisham">
+                                  <img loading="lazy" src="img/testimonials/Mohd Hisham.png" alt="Mohd Hisham">
                                 </div>
                                 <div class="mxd-testimonials-card__company">
                                   <span style="font-size:1.2rem; color:#FBBC05; letter-spacing:0.05em;">★★★★★</span>
@@ -888,7 +896,7 @@
                             <div class="mxd-testimonials-card__content">
                               <div class="mxd-testimonials-card__media anim-uni-in-up">
                                 <div class="mxd-testimonials-card__photo">
-                                  <img src="img/testimonials/Mariaa Maisarah.png" alt="Mariaa Maisarah">
+                                  <img loading="lazy" src="img/testimonials/Mariaa Maisarah.png" alt="Mariaa Maisarah">
                                 </div>
                                 <div class="mxd-testimonials-card__company">
                                   <span style="font-size:1.2rem; color:#FBBC05; letter-spacing:0.05em;">★★★★★</span>
@@ -910,7 +918,7 @@
                             <div class="mxd-testimonials-card__content">
                               <div class="mxd-testimonials-card__media anim-uni-in-up">
                                 <div class="mxd-testimonials-card__photo">
-                                  <img src="https://ui-avatars.com/api/?name=Risa+Listiani&background=89F336&color=000000&bold=true&size=300" alt="Risa Listiani">
+                                  <img loading="lazy" src="https://ui-avatars.com/api/?name=Risa+Listiani&background=89F336&color=000000&bold=true&size=300" alt="Risa Listiani">
                                 </div>
                                 <div class="mxd-testimonials-card__company">
                                   <span style="font-size:1.2rem; color:#FBBC05; letter-spacing:0.05em;">★★★★★</span>
@@ -1048,7 +1056,7 @@
                   <div class="col-12 col-md-6 col-xl-3 mxd-partners-cards__item mxd-grid-item animate-card-4">
                     <a class="mxd-partners-cards__inner" href="#0">
                       <div class="mxd-partners-cards__logo">
-                        <img src="img/brands/logo_Redha-Dental.webp" alt="Redha Dental">
+                        <img loading="lazy" src="img/brands/logo_Redha-Dental.webp" alt="Redha Dental">
                       </div>
                     </a>
                   </div>
@@ -1056,7 +1064,7 @@
                   <div class="col-12 col-md-6 col-xl-3 mxd-partners-cards__item mxd-grid-item animate-card-4">
                     <a class="mxd-partners-cards__inner" href="#0">
                       <div class="mxd-partners-cards__logo">
-                        <img src="img/brands/logo_Emerald-Bayu.webp" alt="Emerald Bayu">
+                        <img loading="lazy" src="img/brands/logo_Emerald-Bayu.webp" alt="Emerald Bayu">
                       </div>
                     </a>
                   </div>
@@ -1064,7 +1072,7 @@
                   <div class="col-12 col-md-6 col-xl-3 mxd-partners-cards__item mxd-grid-item animate-card-4">
                     <a class="mxd-partners-cards__inner" href="#0">
                       <div class="mxd-partners-cards__logo">
-                        <img src="img/brands/logo_Onz-Solar.webp" alt="Onz Solar">
+                        <img loading="lazy" src="img/brands/logo_Onz-Solar.webp" alt="Onz Solar">
                       </div>
                     </a>
                   </div>
@@ -1072,7 +1080,7 @@
                   <div class="col-12 col-md-6 col-xl-3 mxd-partners-cards__item mxd-grid-item animate-card-4">
                     <a class="mxd-partners-cards__inner" href="#0">
                       <div class="mxd-partners-cards__logo">
-                        <img src="img/brands/logo_Doi-Chang.webp" alt="Doi Chang">
+                        <img loading="lazy" src="img/brands/logo_Doi-Chang.webp" alt="Doi Chang">
                       </div>
                     </a>
                   </div>
@@ -1080,7 +1088,7 @@
                   <div class="col-12 col-md-6 col-xl-3 mxd-partners-cards__item mxd-grid-item animate-card-4">
                     <a class="mxd-partners-cards__inner" href="#0">
                       <div class="mxd-partners-cards__logo">
-                        <img src="img/brands/logo_Premium-Sport-Cycle.webp" alt="Premium Sport Cycle">
+                        <img loading="lazy" src="img/brands/logo_Premium-Sport-Cycle.webp" alt="Premium Sport Cycle">
                       </div>
                     </a>
                   </div>
@@ -1088,7 +1096,7 @@
                   <div class="col-12 col-md-6 col-xl-3 mxd-partners-cards__item mxd-grid-item animate-card-4">
                     <a class="mxd-partners-cards__inner" href="#0">
                       <div class="mxd-partners-cards__logo">
-                        <img src="img/brands/logo_Klinik-Utama.webp" alt="Klinik Utama">
+                        <img loading="lazy" src="img/brands/logo_Klinik-Utama.webp" alt="Klinik Utama">
                       </div>
                     </a>
                   </div>
@@ -1096,7 +1104,7 @@
                   <div class="col-12 col-md-6 col-xl-3 mxd-partners-cards__item mxd-grid-item animate-card-4">
                     <a class="mxd-partners-cards__inner" href="#0">
                       <div class="mxd-partners-cards__logo">
-                        <img src="img/brands/logo_Sake-Cha.webp" alt="Sake Cha">
+                        <img loading="lazy" src="img/brands/logo_Sake-Cha.webp" alt="Sake Cha">
                       </div>
                     </a>
                   </div>

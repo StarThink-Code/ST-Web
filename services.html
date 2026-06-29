@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en" dir="ltr">
 
   <head>
@@ -18,9 +18,10 @@
     <meta property="og:url" content="https://www.starthinkmy.com/services.html">
     <meta property="og:image" content="img/og-image.jpg">
     <link rel="stylesheet" type="text/css" href="css/loaders/loader.css">
-    <link rel="stylesheet" type="text/css" href="css/plugins.css">
+    <link rel="stylesheet" type="text/css" href="css/plugins.min.css">
     <link rel="stylesheet" type="text/css" href="css/main.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"></noscript>
     <meta name="theme-color" content="#0D0D0D">
     <meta name="msapplication-navbutton-color" content="#0D0D0D">
     <meta name="mobile-web-app-capable" content="yes">
@@ -31,6 +32,9 @@
 
     <!-- Floating Orb Animations -->
     <link rel="stylesheet" type="text/css" href="css/custom/orbs.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Funnel+Sans:ital,wght@0,300..800;1,300..800&display=swap">
 
   </head>
 
@@ -161,7 +165,7 @@
             <div class="srv-card anim-uni-in-up">
               <div class="srv-card__inner-wrap">
                 <div class="srv-card__visual srv-card__visual--photo">
-                  <img src="img/services/service-content.jpg" alt="Content Planning">
+                  <img loading="lazy" src="img/services/service-content.jpg" alt="Content Planning">
                   <div class="srv-card__overlay"></div>
                   <span class="srv-card__num">01</span>
                   <span class="srv-card__tag">Strategy</span>
@@ -188,7 +192,7 @@
             <div class="srv-card anim-uni-in-up">
               <div class="srv-card__inner-wrap">
                 <div class="srv-card__visual srv-card__visual--photo">
-                  <img src="img/services/service-video.jpg" alt="Video Editing">
+                  <img loading="lazy" src="img/services/service-video.jpg" alt="Video Editing">
                   <div class="srv-card__overlay"></div>
                   <span class="srv-card__num">02</span>
                   <span class="srv-card__tag">Video</span>
@@ -215,7 +219,7 @@
             <div class="srv-card srv-card--wide anim-uni-in-up">
               <div class="srv-card__inner-wrap">
                 <div class="srv-card__visual srv-card__visual--obj">
-                  <img src="img/3D_Object/Meta_Ads.png" alt="Content Creation">
+                  <img loading="lazy" src="img/3D_Object/Meta_Ads.png" alt="Content Creation">
                   <span class="srv-card__num">03</span>
                   <span class="srv-card__tag">Content</span>
                 </div>
@@ -241,7 +245,7 @@
             <div class="srv-card srv-card--wide anim-uni-in-up">
               <div class="srv-card__inner-wrap">
                 <div class="srv-card__visual srv-card__visual--photo" style="order:2;">
-                  <img src="img/services/service-ads.jpg" alt="Paid Ads">
+                  <img loading="lazy" src="img/services/service-ads.jpg" alt="Paid Ads">
                   <div class="srv-card__overlay"></div>
                   <span class="srv-card__num">04</span>
                   <span class="srv-card__tag" style="right:auto; left:2.4rem;">Paid Ads</span>
@@ -270,7 +274,7 @@
             <div class="srv-card anim-uni-in-up">
               <div class="srv-card__inner-wrap">
                 <div class="srv-card__visual srv-card__visual--obj" style="background: rgba(20,20,20,0.6);">
-                  <img src="img/3D_Object/camera.png" alt="Motion Graphics">
+                  <img loading="lazy" src="img/3D_Object/camera.png" alt="Motion Graphics">
                   <span class="srv-card__num">05</span>
                   <span class="srv-card__tag">Motion</span>
                 </div>
@@ -295,7 +299,7 @@
             <div class="srv-card anim-uni-in-up">
               <div class="srv-card__inner-wrap">
                 <div class="srv-card__visual srv-card__visual--obj" style="background: rgba(255,255,255,0.03);">
-                  <img src="img/3D_Object/Astronaut.png" alt="Talent Management">
+                  <img loading="lazy" src="img/3D_Object/Astronaut.png" alt="Talent Management">
                   <span class="srv-card__num">06</span>
                   <span class="srv-card__tag">Talent</span>
                 </div>
@@ -320,7 +324,7 @@
             <div class="srv-card srv-card--wide anim-uni-in-up">
               <div class="srv-card__inner-wrap">
                 <div class="srv-card__visual srv-card__visual--obj" style="background: rgba(255,255,255,0.03);">
-                  <img src="img/3D_Object/Social_Media.png" alt="Social Media">
+                  <img loading="lazy" src="img/3D_Object/Social_Media.png" alt="Social Media">
                   <span class="srv-card__num">07</span>
                   <span class="srv-card__tag">Social</span>
                 </div>
@@ -346,7 +350,7 @@
             <div class="srv-card anim-uni-in-up">
               <div class="srv-card__inner-wrap">
                 <div class="srv-card__visual srv-card__visual--photo">
-                  <img src="img/3D_Object/poster.png" alt="Poster Design">
+                  <img loading="lazy" src="img/3D_Object/poster.png" alt="Poster Design">
                   <div class="srv-card__overlay"></div>
                   <span class="srv-card__num">08</span>
                   <span class="srv-card__tag">Design</span>
@@ -373,7 +377,7 @@
             <div class="srv-card anim-uni-in-up">
               <div class="srv-card__inner-wrap">
                 <div class="srv-card__visual srv-card__visual--obj" style="background: rgba(20,20,20,0.6);">
-                  <img src="img/3D_Object/Astronaut02.png" alt="Website Development">
+                  <img loading="lazy" src="img/3D_Object/Astronaut02.png" alt="Website Development">
                   <span class="srv-card__num">09</span>
                   <span class="srv-card__tag">Web</span>
                 </div>
@@ -421,13 +425,13 @@
             <div class="mxd-partners-cards">
               <div class="container-fluid px-0">
                 <div class="row gx-0">
-                  <div class="col-12 col-md-6 col-xl-3 mxd-partners-cards__item mxd-grid-item animate-card-4"><a class="mxd-partners-cards__inner" href="#0"><div class="mxd-partners-cards__logo"><img src="img/brands/logo_Redha-Dental.webp" alt="Redha Dental"></div></a></div>
-                  <div class="col-12 col-md-6 col-xl-3 mxd-partners-cards__item mxd-grid-item animate-card-4"><a class="mxd-partners-cards__inner" href="#0"><div class="mxd-partners-cards__logo"><img src="img/brands/logo_Emerald-Bayu.webp" alt="Emerald Bayu"></div></a></div>
-                  <div class="col-12 col-md-6 col-xl-3 mxd-partners-cards__item mxd-grid-item animate-card-4"><a class="mxd-partners-cards__inner" href="#0"><div class="mxd-partners-cards__logo"><img src="img/brands/logo_Onz-Solar.webp" alt="Onz Solar"></div></a></div>
-                  <div class="col-12 col-md-6 col-xl-3 mxd-partners-cards__item mxd-grid-item animate-card-4"><a class="mxd-partners-cards__inner" href="#0"><div class="mxd-partners-cards__logo"><img src="img/brands/logo_Doi-Chang.webp" alt="Doi Chang"></div></a></div>
-                  <div class="col-12 col-md-6 col-xl-3 mxd-partners-cards__item mxd-grid-item animate-card-4"><a class="mxd-partners-cards__inner" href="#0"><div class="mxd-partners-cards__logo"><img src="img/brands/logo_Premium-Sport-Cycle.webp" alt="Premium Sport Cycle"></div></a></div>
-                  <div class="col-12 col-md-6 col-xl-3 mxd-partners-cards__item mxd-grid-item animate-card-4"><a class="mxd-partners-cards__inner" href="#0"><div class="mxd-partners-cards__logo"><img src="img/brands/logo_Klinik-Utama.webp" alt="Klinik Utama"></div></a></div>
-                  <div class="col-12 col-md-6 col-xl-3 mxd-partners-cards__item mxd-grid-item animate-card-4"><a class="mxd-partners-cards__inner" href="#0"><div class="mxd-partners-cards__logo"><img src="img/brands/logo_Sake-Cha.webp" alt="Sake Cha"></div></a></div>
+                  <div class="col-12 col-md-6 col-xl-3 mxd-partners-cards__item mxd-grid-item animate-card-4"><a class="mxd-partners-cards__inner" href="#0"><div class="mxd-partners-cards__logo"><img loading="lazy" src="img/brands/logo_Redha-Dental.webp" alt="Redha Dental"></div></a></div>
+                  <div class="col-12 col-md-6 col-xl-3 mxd-partners-cards__item mxd-grid-item animate-card-4"><a class="mxd-partners-cards__inner" href="#0"><div class="mxd-partners-cards__logo"><img loading="lazy" src="img/brands/logo_Emerald-Bayu.webp" alt="Emerald Bayu"></div></a></div>
+                  <div class="col-12 col-md-6 col-xl-3 mxd-partners-cards__item mxd-grid-item animate-card-4"><a class="mxd-partners-cards__inner" href="#0"><div class="mxd-partners-cards__logo"><img loading="lazy" src="img/brands/logo_Onz-Solar.webp" alt="Onz Solar"></div></a></div>
+                  <div class="col-12 col-md-6 col-xl-3 mxd-partners-cards__item mxd-grid-item animate-card-4"><a class="mxd-partners-cards__inner" href="#0"><div class="mxd-partners-cards__logo"><img loading="lazy" src="img/brands/logo_Doi-Chang.webp" alt="Doi Chang"></div></a></div>
+                  <div class="col-12 col-md-6 col-xl-3 mxd-partners-cards__item mxd-grid-item animate-card-4"><a class="mxd-partners-cards__inner" href="#0"><div class="mxd-partners-cards__logo"><img loading="lazy" src="img/brands/logo_Premium-Sport-Cycle.webp" alt="Premium Sport Cycle"></div></a></div>
+                  <div class="col-12 col-md-6 col-xl-3 mxd-partners-cards__item mxd-grid-item animate-card-4"><a class="mxd-partners-cards__inner" href="#0"><div class="mxd-partners-cards__logo"><img loading="lazy" src="img/brands/logo_Klinik-Utama.webp" alt="Klinik Utama"></div></a></div>
+                  <div class="col-12 col-md-6 col-xl-3 mxd-partners-cards__item mxd-grid-item animate-card-4"><a class="mxd-partners-cards__inner" href="#0"><div class="mxd-partners-cards__logo"><img loading="lazy" src="img/brands/logo_Sake-Cha.webp" alt="Sake Cha"></div></a></div>
                 </div>
               </div>
             </div>

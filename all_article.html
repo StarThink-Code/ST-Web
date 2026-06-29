@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en" dir="ltr">
 
   <head>
@@ -16,6 +16,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 
+        <!-- DNS Preconnect for CDN resources -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
     <!-- Favicon & Icons Start -->
     <link rel="icon" href="img/logo/faviocn.png" type="image/png">
     <link rel="apple-touch-icon" href="img/logo/faviocn.png">
@@ -32,7 +36,7 @@
 
     <!-- Template Styles Start -->
     <link rel="stylesheet" type="text/css" href="css/loaders/loader.css">
-    <link rel="stylesheet" type="text/css" href="css/plugins.css">
+    <link rel="stylesheet" type="text/css" href="css/plugins.min.css">
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <!-- Template Styles End -->
 
@@ -40,7 +44,8 @@
     <link rel="stylesheet" type="text/css" href="css/custom/orbs.css">
 
     <!-- Font Awesome Brands -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"></noscript>
 
     <!-- Custom Browser Color Start -->
     <meta name="theme-color" content="#0D0D0D">
@@ -48,6 +53,9 @@
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <!-- Custom Browser Color End -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Funnel+Sans:ital,wght@0,300..800;1,300..800&display=swap">
 
   </head>
 
@@ -263,7 +271,7 @@
               <!-- Featured Post Start -->
               <article class="mxd-post post-featured radius-m">
                 <a class="post-featured__thumb" href="blog-article.html">
-                  <img src="img/blog/blog-digimkt.jpg" alt="Featured Article">
+                  <img loading="lazy" src="img/blog/blog-digimkt.jpg" alt="Featured Article">
                 </a>
                 <div class="post-featured__categories">
                   <span class="tag tag-default tag-outline-permanent tag-link-outline-premanent">
@@ -307,10 +315,10 @@
               <!-- Post 1 -->
               <article class="mxd-post post-simple">
                 <a class="post-simple__thumb radius-m" href="blog-article.html">
-                  <img src="img/blog/blog-tiktok.jpg" alt="Social Media Consistency">
+                  <img loading="lazy" src="img/blog/blog-tiktok.jpg" alt="Social Media Consistency">
                   <div class="mxd-preview-hover">
                     <i class="mxd-preview-hover__icon icon-small">
-                      <img src="img/icons/icon-eye.svg" alt="Eye Icon">
+                      <img loading="lazy" src="img/icons/icon-eye.svg" alt="Eye Icon">
                     </i>
                   </div>
                 </a>
@@ -349,10 +357,10 @@
               <!-- Post 2 -->
               <article class="mxd-post post-simple">
                 <a class="post-simple__thumb radius-m" href="blog-article.html">
-                  <img src="img/blog/blog-tiktok.jpg" alt="Short-Form Video">
+                  <img loading="lazy" src="img/blog/blog-tiktok.jpg" alt="Short-Form Video">
                   <div class="mxd-preview-hover">
                     <i class="mxd-preview-hover__icon icon-small">
-                      <img src="img/icons/icon-eye.svg" alt="Eye Icon">
+                      <img loading="lazy" src="img/icons/icon-eye.svg" alt="Eye Icon">
                     </i>
                   </div>
                 </a>
@@ -391,10 +399,10 @@
               <!-- Post 3 -->
               <article class="mxd-post post-simple">
                 <a class="post-simple__thumb radius-m" href="blog-article.html">
-                  <img src="img/blog/blog-digimkt.jpg" alt="Paid Ads">
+                  <img loading="lazy" src="img/blog/blog-digimkt.jpg" alt="Paid Ads">
                   <div class="mxd-preview-hover">
                     <i class="mxd-preview-hover__icon icon-small">
-                      <img src="img/icons/icon-eye.svg" alt="Eye Icon">
+                      <img loading="lazy" src="img/icons/icon-eye.svg" alt="Eye Icon">
                     </i>
                   </div>
                 </a>
@@ -433,10 +441,10 @@
               <!-- Post 4 -->
               <article class="mxd-post post-simple">
                 <a class="post-simple__thumb radius-m" href="blog-article.html">
-                  <img src="img/blog/blog-blueprint.jpg" alt="Content Strategy">
+                  <img loading="lazy" src="img/blog/blog-blueprint.jpg" alt="Content Strategy">
                   <div class="mxd-preview-hover">
                     <i class="mxd-preview-hover__icon icon-small">
-                      <img src="img/icons/icon-eye.svg" alt="Eye Icon">
+                      <img loading="lazy" src="img/icons/icon-eye.svg" alt="Eye Icon">
                     </i>
                   </div>
                 </a>
@@ -475,10 +483,10 @@
               <!-- Post 5 -->
               <article class="mxd-post post-simple">
                 <a class="post-simple__thumb radius-m" href="blog-article.html">
-                  <img src="img/blog/blog-storytelling.jpg" alt="Authentic Storytelling">
+                  <img loading="lazy" src="img/blog/blog-storytelling.jpg" alt="Authentic Storytelling">
                   <div class="mxd-preview-hover">
                     <i class="mxd-preview-hover__icon icon-small">
-                      <img src="img/icons/icon-eye.svg" alt="Eye Icon">
+                      <img loading="lazy" src="img/icons/icon-eye.svg" alt="Eye Icon">
                     </i>
                   </div>
                 </a>
@@ -570,7 +578,7 @@
                   <li class="recent-post__item">
                     <div class="recent-post__thumb">
                       <a href="blog-article.html">
-                        <img src="img/blog/blog-tiktok.jpg" alt="Social Media Article">
+                        <img loading="lazy" src="img/blog/blog-tiktok.jpg" alt="Social Media Article">
                       </a>
                     </div>
                     <div class="recent-post__content">
@@ -590,7 +598,7 @@
                   <li class="recent-post__item">
                     <div class="recent-post__thumb">
                       <a href="blog-article.html">
-                        <img src="img/blog/blog-tiktok.jpg" alt="Video Article">
+                        <img loading="lazy" src="img/blog/blog-tiktok.jpg" alt="Video Article">
                       </a>
                     </div>
                     <div class="recent-post__content">
@@ -610,7 +618,7 @@
                   <li class="recent-post__item">
                     <div class="recent-post__thumb">
                       <a href="blog-article.html">
-                        <img src="img/blog/blog-storytelling.jpg" alt="Branding Article">
+                        <img loading="lazy" src="img/blog/blog-storytelling.jpg" alt="Branding Article">
                       </a>
                     </div>
                     <div class="recent-post__content">

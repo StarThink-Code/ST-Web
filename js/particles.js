@@ -3,7 +3,7 @@
   if (!canvas) return;
   const ctx = canvas.getContext('2d');
 
-  const COUNT = 160;
+  const COUNT = 90;
   const ACCENT = '137, 243, 54';
   const WHITE  = '255, 255, 255';
   const PALE   = '190, 255, 130';
