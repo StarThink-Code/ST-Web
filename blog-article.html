@@ -34,106 +34,10 @@
     <link rel="stylesheet" type="text/css" href="css/main.css">
 
     <!-- Floating Orb Animations -->
-    <style>
-      @keyframes float-orb-1 {
-        0%,100% { transform: translate(0,0) scale(1); }
-        33%      { transform: translate(50px,-40px) scale(1.06); }
-        66%      { transform: translate(-30px,25px) scale(0.96); }
-      }
-      @keyframes float-orb-2 {
-        0%,100% { transform: translate(0,0) scale(1); }
-        40%     { transform: translate(-60px,35px) scale(1.09); }
-        75%     { transform: translate(35px,-25px) scale(0.94); }
-      }
-      @keyframes float-orb-3 {
-        0%,100% { transform: translate(0,0) scale(1); }
-        50%     { transform: translate(30px,50px) scale(1.05); }
-      }
-      .bg-orb {
-        position: fixed;
-        border-radius: 50%;
-        pointer-events: none;
-        z-index: 1;
-      }
-      .bg-orb-1 {
-        width: 560px; height: 560px;
-        top: -120px; left: -120px;
-        background: radial-gradient(circle, rgba(137,243,54,0.13) 0%, transparent 70%);
-        filter: blur(90px);
-        animation: float-orb-1 16s ease-in-out infinite;
-      }
-      .bg-orb-2 {
-        width: 460px; height: 460px;
-        bottom: -60px; right: -80px;
-        background: radial-gradient(circle, rgba(137,243,54,0.11) 0%, transparent 70%);
-        filter: blur(80px);
-        animation: float-orb-2 20s ease-in-out infinite;
-      }
-      .bg-orb-3 {
-        width: 380px; height: 380px;
-        top: 38%; left: 52%;
-        background: radial-gradient(circle, rgba(137,243,54,0.08) 0%, transparent 70%);
-        filter: blur(70px);
-        animation: float-orb-3 13s ease-in-out infinite;
-      }
-    </style>
+    <link rel="stylesheet" type="text/css" href="css/custom/orbs.css">
 
-    <!-- Article page overrides -->
-    <style>
-      /* Fix browser-default link purple in sidebar and article body */
-      .article-sidebar a,
-      .article-body a {
-        color: inherit;
-        text-decoration: none;
-      }
-      .article-sidebar a:hover {
-        color: #89F336;
-      }
-      /* Date text colour override */
-      .article-sidebar .meta-date,
-      .article-sidebar span[style*="opacity: 0.4"] {
-        color: rgba(255,255,255,0.45) !important;
-      }
-      /* Category row hover */
-      .sidebar-cat-link {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 1.2rem 0;
-        font-size: 1.5rem;
-        color: rgba(255,255,255,0.72);
-        text-decoration: none;
-        transition: color 0.2s;
-      }
-      .sidebar-cat-link:hover { color: #89F336; }
-      /* Related article link */
-      .sidebar-related-link {
-        display: flex;
-        gap: 1.6rem;
-        align-items: flex-start;
-        text-decoration: none;
-        color: inherit;
-        transition: opacity 0.2s;
-      }
-      .sidebar-related-link:hover { opacity: 0.75; }
-      .sidebar-related-link p { color: rgba(255,255,255,0.85); margin: 0 0 0.5rem; }
-      .sidebar-related-link span { color: rgba(255,255,255,0.4); font-size: 1.2rem; }
-      /* Social follow links */
-      .sidebar-social-link {
-        display: flex;
-        align-items: center;
-        gap: 1.2rem;
-        padding: 1.2rem 1.6rem;
-        border-radius: 10px;
-        background: rgba(255,255,255,0.04);
-        text-decoration: none;
-        font-size: 1.4rem;
-        color: rgba(255,255,255,0.78);
-        transition: background 0.2s, color 0.2s;
-      }
-      .sidebar-social-link:hover { background: rgba(137,243,54,0.08); color: #89F336; }
-      .sidebar-social-link i { font-size: 1.8rem; color: #89F336; }
-    </style>
+    <!-- Article Page Styles -->
+    <link rel="stylesheet" type="text/css" href="css/custom/article.css">
 
     <!-- Font Awesome Brands -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">

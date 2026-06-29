@@ -1,0 +1,59 @@
+/* ── Article Page — Sidebar & Link Overrides ── */
+
+/* Fix browser-default link purple in sidebar and article body */
+.article-sidebar a,
+.article-body a {
+  color: inherit;
+  text-decoration: none;
+}
+.article-sidebar a:hover {
+  color: #89F336;
+}
+
+/* Date text colour override */
+.article-sidebar .meta-date,
+.article-sidebar span[style*="opacity: 0.4"] {
+  color: rgba(255,255,255,0.45) !important;
+}
+
+/* Category row */
+.sidebar-cat-link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 0;
+  font-size: 1.5rem;
+  color: rgba(255,255,255,0.72);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.sidebar-cat-link:hover { color: #89F336; }
+
+/* Related article link */
+.sidebar-related-link {
+  display: flex;
+  gap: 1.6rem;
+  align-items: flex-start;
+  text-decoration: none;
+  color: inherit;
+  transition: opacity 0.2s;
+}
+.sidebar-related-link:hover { opacity: 0.75; }
+.sidebar-related-link p { color: rgba(255,255,255,0.85); margin: 0 0 0.5rem; }
+.sidebar-related-link span { color: rgba(255,255,255,0.4); font-size: 1.2rem; }
+
+/* Social follow links */
+.sidebar-social-link {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  padding: 1.2rem 1.6rem;
+  border-radius: 10px;
+  background: rgba(255,255,255,0.04);
+  text-decoration: none;
+  font-size: 1.4rem;
+  color: rgba(255,255,255,0.78);
+  transition: background 0.2s, color 0.2s;
+}
+.sidebar-social-link:hover { background: rgba(137,243,54,0.08); color: #89F336; }
+.sidebar-social-link i { font-size: 1.8rem; color: #89F336; }
