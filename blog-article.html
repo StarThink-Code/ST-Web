@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+  <head>
+    <meta charset="UTF-8">
+
+    <!-- Page Title -->
+    <title>How to Build a Strong Brand Identity — StarThink</title>
+
+    <!-- Meta Tags -->
+    <meta name="description" content="Your brand is more than a logo. Learn how to build a strong, memorable brand identity that sets your small business apart and builds lasting customer trust.">
+    <meta name="keywords" content="StarThink, brand identity, branding Malaysia, small business branding, brand strategy, digital marketing">
+    <meta name="author" content="StarThink">
+
+    <!-- Viewport Meta -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+    <!-- Favicon & Icons -->
+    <link rel="icon" href="img/logo/faviocn.png" type="image/png">
+    <link rel="apple-touch-icon" href="img/logo/faviocn.png">
+
+    <!-- Facebook Metadata -->
+    <meta property="og:image:height" content="1200">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:title" content="How to Build a Strong Brand Identity — StarThink">
+    <meta property="og:description" content="Your brand is more than a logo. Learn how to build a brand identity that sticks, builds trust, and sets you apart.">
+    <meta property="og:url" content="https://www.starthinkmy.com/blog-article.html">
+    <meta property="og:image" content="img/blog/blog-digimkt.jpg">
+
+    <!-- Template Styles -->
+    <link rel="stylesheet" type="text/css" href="css/loaders/loader.css">
+    <link rel="stylesheet" type="text/css" href="css/plugins.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+
+    <!-- Floating Orb Animations -->
+    <style>
+      @keyframes float-orb-1 {
+        0%,100% { transform: translate(0,0) scale(1); }
+        33%      { transform: translate(50px,-40px) scale(1.06); }
+        66%      { transform: translate(-30px,25px) scale(0.96); }
+      }
+      @keyframes float-orb-2 {
+        0%,100% { transform: translate(0,0) scale(1); }
+        40%     { transform: translate(-60px,35px) scale(1.09); }
+        75%     { transform: translate(35px,-25px) scale(0.94); }
+      }
+      @keyframes float-orb-3 {
+        0%,100% { transform: translate(0,0) scale(1); }
+        50%     { transform: translate(30px,50px) scale(1.05); }
+      }
+      .bg-orb {
+        position: fixed;
+        border-radius: 50%;
+        pointer-events: none;
+        z-index: 1;
+      }
+      .bg-orb-1 {
+        width: 560px; height: 560px;
+        top: -120px; left: -120px;
+        background: radial-gradient(circle, rgba(137,243,54,0.13) 0%, transparent 70%);
+        filter: blur(90px);
+        animation: float-orb-1 16s ease-in-out infinite;
+      }
+      .bg-orb-2 {
+        width: 460px; height: 460px;
+        bottom: -60px; right: -80px;
+        background: radial-gradient(circle, rgba(137,243,54,0.11) 0%, transparent 70%);
+        filter: blur(80px);
+        animation: float-orb-2 20s ease-in-out infinite;
+      }
+      .bg-orb-3 {
+        width: 380px; height: 380px;
+        top: 38%; left: 52%;
+        background: radial-gradient(circle, rgba(137,243,54,0.08) 0%, transparent 70%);
+        filter: blur(70px);
+        animation: float-orb-3 13s ease-in-out infinite;
+      }
+    </style>
+
+    <!-- Article page overrides -->
+    <style>
+      /* Fix browser-default link purple in sidebar and article body */
+      .article-sidebar a,
+      .article-body a {
+        color: inherit;
+        text-decoration: none;
+      }
+      .article-sidebar a:hover {
+        color: #89F336;
+      }
+      /* Date text colour override */
+      .article-sidebar .meta-date,
+      .article-sidebar span[style*="opacity: 0.4"] {
+        color: rgba(255,255,255,0.45) !important;
+      }
+      /* Category row hover */
+      .sidebar-cat-link {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1.2rem 0;
+        font-size: 1.5rem;
+        color: rgba(255,255,255,0.72);
+        text-decoration: none;
+        transition: color 0.2s;
+      }
+      .sidebar-cat-link:hover { color: #89F336; }
+      /* Related article link */
+      .sidebar-related-link {
+        display: flex;
+        gap: 1.6rem;
+        align-items: flex-start;
+        text-decoration: none;
+        color: inherit;
+        transition: opacity 0.2s;
+      }
+      .sidebar-related-link:hover { opacity: 0.75; }
+      .sidebar-related-link p { color: rgba(255,255,255,0.85); margin: 0 0 0.5rem; }
+      .sidebar-related-link span { color: rgba(255,255,255,0.4); font-size: 1.2rem; }
+      /* Social follow links */
+      .sidebar-social-link {
+        display: flex;
+        align-items: center;
+        gap: 1.2rem;
+        padding: 1.2rem 1.6rem;
+        border-radius: 10px;
+        background: rgba(255,255,255,0.04);
+        text-decoration: none;
+        font-size: 1.4rem;
+        color: rgba(255,255,255,0.78);
+        transition: background 0.2s, color 0.2s;
+      }
+      .sidebar-social-link:hover { background: rgba(137,243,54,0.08); color: #89F336; }
+      .sidebar-social-link i { font-size: 1.8rem; color: #89F336; }
+    </style>
+
+    <!-- Font Awesome Brands -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- Custom Browser Color -->
+    <meta name="theme-color" content="#0D0D0D">
+    <meta name="msapplication-navbutton-color" content="#0D0D0D">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+  </head>
+
+  <body>
+
+    <!-- Particle Background Start -->
+    <canvas id="particles-canvas" style="position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:0;"></canvas>
+    <!-- Particle Background End -->
+
+    <!-- Floating Background Orbs Start -->
+    <div class="bg-orb bg-orb-1"></div>
+    <div class="bg-orb bg-orb-2"></div>
+    <div class="bg-orb bg-orb-3"></div>
+    <!-- Floating Background Orbs End -->
+
+    <!-- Loader Start -->
+    <div id="loader" class="loader">
+      <div class="loader__panel loader__panel--top"></div>
+      <div class="loader__panel loader__panel--bottom"></div>
+      <div class="loader__brand">
+        <span class="loader__letter">S</span>
+        <span class="loader__letter">T</span>
+        <span class="loader__letter">A</span>
+        <span class="loader__letter">R</span>
+        <span class="loader__letter">T</span>
+        <span class="loader__letter">H</span>
+        <span class="loader__letter">I</span>
+        <span class="loader__letter">N</span>
+        <span class="loader__letter">K</span>
+        <div class="loader__light"></div>
+      </div>
+    </div>
+    <!-- Loader End -->
+
+    <!-- Menu & Menu Hamburger Start -->
+    <nav class="mxd-nav__wrap" data-lenis-prevent="">
+      <div class="mxd-nav__contain loading__fade">
+        <a href="#0" class="mxd-nav__hamburger" aria-label="Menu">
+          <div class="hamburger__base"></div>
+          <div class="hamburger__line"></div>
+          <div class="hamburger__line"></div>
+        </a>
+      </div>
+      <div class="mxd-menu__wrapper">
+        <div class="mxd-menu__base"></div>
+        <div class="mxd-menu__contain">
+          <div class="mxd-menu__inner">
+            <div class="mxd-menu__left">
+              <p class="mxd-menu__caption menu-fade-in">✦ Your preferred digital marketing<br>agency in Malaysia</p>
+              <div class="main-menu">
+                <nav class="main-menu__content">
+                  <ul id="main-menu" class="main-menu__accordion">
+                    <li class="main-menu__item">
+                      <a class="main-menu__link btn btn-anim" href="index.html"><span class="btn-caption">Home</span></a>
+                    </li>
+                    <li class="main-menu__item">
+                      <a class="main-menu__link btn btn-anim" href="about-us.html"><span class="btn-caption">About Us</span></a>
+                    </li>
+                    <li class="main-menu__item">
+                      <a class="main-menu__link btn btn-anim" href="services.html"><span class="btn-caption">Services</span></a>
+                    </li>
+                    <li class="main-menu__item">
+                      <a class="main-menu__link btn btn-anim" href="works-simple.html"><span class="btn-caption">Project</span></a>
+                    </li>
+                    <li class="main-menu__item">
+                      <a class="main-menu__link btn btn-anim" href="all_article.html"><span class="btn-caption">Article</span></a>
+                    </li>
+                    <li class="main-menu__item">
+                      <a class="main-menu__link btn btn-anim" href="contact.html"><span class="btn-caption">Contact Us</span></a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+            <div class="mxd-menu__right">
+              <div class="menu-promo">
+                <div class="menu-promo__content">
+                  <p class="menu-promo__caption menu-fade-in">👋 We help small businesses grow<br>through creative content, strategy,<br>and storytelling that builds real connections.</p>
+                  <div class="menu-promo__video">
+                    <video class="menu-video" id="inner-video" preload="auto" autoplay="autoplay" loop="loop" muted="muted" poster="img/logo/Green_Logo.png">
+                      <source type="video/mp4" src="video/540x310_video.mp4">
+                      <source type="video/webm" src="video/540x310_video.webm">
+                      <source type="video/ogv" src="video/540x310_video.ogv">
+                    </video>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="mxd-menu__data menu-fade-in">
+              <p class="t-xsmall">StarThink Digital Marketing Agency</p>
+              <p class="t-xsmall"><i class="ph ph-copyright"></i> 2026 StarThink. All rights reserved.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- Menu & Menu Hamburger End -->
+
+    <!-- Header Start -->
+    <header id="header" class="mxd-header">
+      <div class="mxd-header__logo loading__fade">
+        <a href="index.html" class="mxd-logo">
+          <img src="img/logo/Logo.png" alt="StarThink" style="height: 84px; width: auto;">
+        </a>
+      </div>
+      <div class="mxd-header__controls loading__fade">
+        <a class="btn btn-anim btn-default btn-mobile-icon btn-outline slide-right-up" href="contact.html" aria-label="Get In Touch">
+          <span class="btn-caption">Get In Touch</span>
+          <i class="ph-bold ph-arrow-up-right"></i>
+        </a>
+      </div>
+    </header>
+    <!-- Header End -->
+
+    <!-- Page Content Start -->
+    <main id="mxd-page-content" class="mxd-page-content inner-page-content">
+
+      <!-- Article Headline Start -->
+      <div class="mxd-section loading-wrap" style="padding-bottom: 0;">
+        <div class="mxd-container grid-container">
+          <div class="mxd-article-area loading__fade">
+
+            <!-- Breadcrumb -->
+            <div class="mxd-article__breadcrumbs loading__item" style="justify-content: flex-start; margin-bottom: 3rem;">
+              <span><a href="index.html">Home</a></span>
+              <span><a href="all_article.html">Articles</a></span>
+              <span class="current-item">Branding</span>
+            </div>
+
+            <!-- Meta row -->
+            <div class="loading__item" style="display: flex; flex-wrap: wrap; align-items: center; gap: 1.2rem; margin-bottom: 3rem;">
+              <span class="tag tag-default tag-outline tag-link-outline" style="margin: 0;"><a href="all_article.html">Branding</a></span>
+              <span class="tag tag-default tag-outline tag-link-outline" style="margin: 0;"><a href="all_article.html">Strategy</a></span>
+              <span style="opacity: 0.35; font-size: 1.4rem;">·</span>
+              <span style="opacity: 0.5; font-size: 1.4rem;">June 15, 2026</span>
+              <span style="opacity: 0.35; font-size: 1.4rem;">·</span>
+              <span style="opacity: 0.5; font-size: 1.4rem;">5 min read</span>
+            </div>
+
+            <!-- Title -->
+            <h1 class="loading__item" style="max-width: 860px; line-height: 1.08; font-size: clamp(3.6rem, 5.5vw, 7rem); margin-bottom: 4rem;">
+              How to build a strong brand identity for your small business
+            </h1>
+
+            <!-- Featured image full width -->
+            <div class="loading__item" style="width: 100%; height: clamp(280px, 45vw, 580px); border-radius: var(--_radius-l); overflow: hidden; margin-bottom: 0;">
+              <img src="img/blog/blog-digimkt.jpg" alt="How to build a strong brand identity" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <!-- Article Headline End -->
+
+      <!-- Two-Column Body Start -->
+      <div class="mxd-section" style="padding-top: 6rem; padding-bottom: 8rem;">
+        <div class="mxd-container grid-container">
+          <div class="row gx-5 gy-5 align-items-start">
+
+            <!-- ── LEFT: Article Body ── -->
+            <div class="col-12 col-lg-8">
+              <div style="display: flex; flex-direction: column; gap: 4rem; font-size: 1.7rem; line-height: 1.8;">
+
+                <!-- Intro -->
+                <div style="display: flex; flex-direction: column; gap: 2rem;">
+                  <p>Your brand is more than a logo. It's the gut feeling people get the moment they encounter your business — in a feed, on a website, or even through word of mouth. A strong brand identity doesn't just look good. It tells people who you are, what you stand for, and why you're the right choice.</p>
+                  <p>For small businesses in Malaysia, this matters more than ever. With competition growing across every industry — from F&B to clinics, solar companies to fashion labels — the brands that cut through are the ones with clarity, consistency, and a story worth telling.</p>
+                  <p>Here's how to build one from the ground up.</p>
+                </div>
+
+                <!-- Section 1 -->
+                <div style="display: flex; flex-direction: column; gap: 1.6rem;">
+                  <h3 style="font-size: clamp(2rem, 2.4vw, 2.8rem); line-height: 1.3;">1. Start with your "why"</h3>
+                  <p>Before you design anything, define what your business is really about. Why did you start it? What problem do you solve that nobody else solves quite the same way? What values drive every decision you make?</p>
+                  <p>These answers form the foundation of your brand. A dental clinic that leads with "affordable family care" feels completely different from one that leads with "clinical excellence." Both can be true — but the one you choose shapes everything: your tone, your visuals, your customer relationships.</p>
+                  <p>Write it down in one or two sentences. This is your brand purpose, and it should inform every piece of content, every ad, and every customer interaction you have.</p>
+                </div>
+
+                <!-- Pull quote -->
+                <blockquote style="border-top: 1px solid rgba(137,243,54,0.3); border-bottom: 1px solid rgba(137,243,54,0.3); padding: 3rem 0; margin: 0;">
+                  <p style="font-size: clamp(2rem, 2.8vw, 3rem); line-height: 1.4; color: var(--accent); font-style: italic; margin: 0;">"The brands that cut through are the ones with clarity, consistency, and a story worth telling."</p>
+                </blockquote>
+
+                <!-- Section 2 -->
+                <div style="display: flex; flex-direction: column; gap: 1.6rem;">
+                  <h3 style="font-size: clamp(2rem, 2.4vw, 2.8rem); line-height: 1.3;">2. Know your audience deeply</h3>
+                  <p>A brand that tries to speak to everyone ends up speaking to no one. The more clearly you define your ideal customer, the more powerfully your brand can connect with them.</p>
+                  <p>Think beyond demographics. What do they care about? What frustrates them? Where do they spend their time online? What language do they use when they talk about products like yours? The better you understand them, the more you can position your brand as exactly what they've been looking for.</p>
+                  <p>At StarThink, before we create a single piece of content for a client, we start here. It's the insight that makes everything else work.</p>
+                </div>
+
+                <!-- In-content image -->
+                <div style="border-radius: var(--_radius-m); overflow: hidden; height: 340px;">
+                  <img src="img/blog/blog-storytelling.jpg" alt="Brand storytelling" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+                </div>
+
+                <!-- Section 3 -->
+                <div style="display: flex; flex-direction: column; gap: 1.6rem;">
+                  <h3 style="font-size: clamp(2rem, 2.4vw, 2.8rem); line-height: 1.3;">3. Build a visual identity that means something</h3>
+                  <p>Now comes the part people usually start with — but it works so much better when you have clarity on your purpose and audience first.</p>
+                  <p>Your visual identity includes your logo, colour palette, typography, and the overall aesthetic of your brand. Every element should feel intentional:</p>
+                  <ul style="display: flex; flex-direction: column; gap: 1.2rem; padding-left: 2.4rem; opacity: 0.85;">
+                    <li><strong style="color: var(--accent);">Colours</strong> carry emotion. Green signals growth and freshness. Navy signals trust and professionalism. Choose colours that reinforce what you want people to feel.</li>
+                    <li><strong style="color: var(--accent);">Typography</strong> sets tone. A bold sans-serif feels modern and direct. A serif feels established and classic. Your font choice says something before a single word is read.</li>
+                    <li><strong style="color: var(--accent);">Logo</strong> is a symbol, not a story. It doesn't need to explain your business — it just needs to be distinctive, clean, and versatile across all sizes and formats.</li>
+                  </ul>
+                  <p>Consistency is everything. Use the same colours, fonts, and visual style across your website, social media, packaging, and ads. Inconsistency erodes trust — even when people can't articulate why.</p>
+                </div>
+
+                <!-- Section 4 -->
+                <div style="display: flex; flex-direction: column; gap: 1.6rem;">
+                  <h3 style="font-size: clamp(2rem, 2.4vw, 2.8rem); line-height: 1.3;">4. Develop a brand voice</h3>
+                  <p>How your brand sounds is just as important as how it looks. Your brand voice is the personality that comes through in every caption, every email, every conversation with a customer.</p>
+                  <p>Are you warm and conversational? Bold and direct? Professional and reassuring? Playful and energetic? Define two or three words that describe your voice, then apply them consistently — especially on social media, where tone shapes perception faster than visuals.</p>
+                  <p>A useful exercise: write the same message in three different tones. Which one sounds most like the brand you want to be? That's your voice.</p>
+                </div>
+
+                <!-- Section 5 -->
+                <div style="display: flex; flex-direction: column; gap: 1.6rem;">
+                  <h3 style="font-size: clamp(2rem, 2.4vw, 2.8rem); line-height: 1.3;">5. Stay consistent and show up</h3>
+                  <p>Brand identity isn't built in a single post or campaign. It's built through hundreds of small, consistent touchpoints over time. Every post, every reply, every piece of packaging is a chance to reinforce who you are.</p>
+                  <p>This is where many small businesses fall short — not because their brand isn't good, but because they go quiet. Inconsistent posting, shifting visual styles, and mixed messaging all create confusion and erode the trust you've worked to build.</p>
+                  <p>Set a realistic content schedule. Use templates to keep your visuals consistent. And remember: showing up imperfectly is always better than not showing up at all.</p>
+                </div>
+
+                <!-- Closing CTA inline -->
+                <div style="background: rgba(137,243,54,0.05); border: 1px solid rgba(137,243,54,0.15); border-radius: var(--_radius-m); padding: 3.5rem 4rem; display: flex; flex-direction: column; gap: 2rem;">
+                  <h3 style="font-size: clamp(2rem, 2.4vw, 2.8rem); line-height: 1.3; margin: 0;">Ready to build a brand that actually works?</h3>
+                  <p style="opacity: 0.7; margin: 0;">At StarThink, we help Malaysian small businesses build brands that connect — from defining your identity and crafting your story, to producing content that brings it to life across every channel.</p>
+                  <div style="display: flex; gap: 1.4rem; flex-wrap: wrap; padding-top: 0.4rem;">
+                    <a class="btn btn-anim btn-default btn-additional slide-right-up" href="contact.html">
+                      <span class="btn-caption">Talk to Us</span>
+                      <i class="ph-bold ph-arrow-up-right"></i>
+                    </a>
+                    <a class="btn btn-anim btn-default btn-outline slide-right-up" href="all_article.html">
+                      <span class="btn-caption">More Articles</span>
+                      <i class="ph ph-arrow-right"></i>
+                    </a>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- ── RIGHT: Sticky Sidebar ── -->
+            <div class="col-12 col-lg-4 article-sidebar">
+              <div style="position: sticky; top: 130px; display: flex; flex-direction: column; gap: 2.4rem;">
+
+                <!-- Categories -->
+                <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.07); border-radius: var(--_radius-m); padding: 3rem;">
+                  <p style="font-size: 1.1rem; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.45); margin-bottom: 2rem;">Categories</p>
+                  <ul style="list-style: none; padding: 0; margin: 0;">
+                    <li style="border-bottom: 1px solid rgba(255,255,255,0.06);">
+                      <a href="all_article.html" class="sidebar-cat-link">
+                        <span>Digital Marketing</span><span style="color: rgba(255,255,255,0.35); font-size: 1.2rem;">4</span>
+                      </a>
+                    </li>
+                    <li style="border-bottom: 1px solid rgba(255,255,255,0.06);">
+                      <a href="all_article.html" class="sidebar-cat-link">
+                        <span>Branding</span><span style="color: rgba(255,255,255,0.35); font-size: 1.2rem;">3</span>
+                      </a>
+                    </li>
+                    <li style="border-bottom: 1px solid rgba(255,255,255,0.06);">
+                      <a href="all_article.html" class="sidebar-cat-link">
+                        <span>Social Media</span><span style="color: rgba(255,255,255,0.35); font-size: 1.2rem;">5</span>
+                      </a>
+                    </li>
+                    <li style="border-bottom: 1px solid rgba(255,255,255,0.06);">
+                      <a href="all_article.html" class="sidebar-cat-link">
+                        <span>Strategy</span><span style="color: rgba(255,255,255,0.35); font-size: 1.2rem;">3</span>
+                      </a>
+                    </li>
+                    <li style="border-bottom: 1px solid rgba(255,255,255,0.06);">
+                      <a href="all_article.html" class="sidebar-cat-link">
+                        <span>Video Editing</span><span style="color: rgba(255,255,255,0.35); font-size: 1.2rem;">2</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="all_article.html" class="sidebar-cat-link">
+                        <span>Growth Tips</span><span style="color: rgba(255,255,255,0.35); font-size: 1.2rem;">4</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+
+                <!-- Related Articles -->
+                <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.07); border-radius: var(--_radius-m); padding: 3rem;">
+                  <p style="font-size: 1.1rem; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.45); margin-bottom: 2rem;">Related Articles</p>
+                  <div style="display: flex; flex-direction: column; gap: 2.4rem;">
+
+                    <a href="blog-article.html" class="sidebar-related-link">
+                      <div style="flex-shrink: 0; width: 72px; height: 72px; border-radius: 10px; overflow: hidden;">
+                        <img src="img/blog/blog-tiktok.jpg" alt="" style="width:100%;height:100%;object-fit:cover;">
+                      </div>
+                      <div>
+                        <p style="font-size: 1.35rem; line-height: 1.45;">Why social media consistency is the key to audience growth</p>
+                        <span>June 10, 2026</span>
+                      </div>
+                    </a>
+
+                    <a href="blog-article.html" class="sidebar-related-link">
+                      <div style="flex-shrink: 0; width: 72px; height: 72px; border-radius: 10px; overflow: hidden;">
+                        <img src="img/blog/blog-blueprint.jpg" alt="" style="width:100%;height:100%;object-fit:cover;">
+                      </div>
+                      <div>
+                        <p style="font-size: 1.35rem; line-height: 1.45;">Content strategy: how to plan for consistent, long-term results</p>
+                        <span>May 18, 2026</span>
+                      </div>
+                    </a>
+
+                    <a href="blog-article.html" class="sidebar-related-link">
+                      <div style="flex-shrink: 0; width: 72px; height: 72px; border-radius: 10px; overflow: hidden;">
+                        <img src="img/blog/blog-tiktok.jpg" alt="" style="width:100%;height:100%;object-fit:cover;">
+                      </div>
+                      <div>
+                        <p style="font-size: 1.35rem; line-height: 1.45;">The power of short-form video and why your business needs it now</p>
+                        <span>June 3, 2026</span>
+                      </div>
+                    </a>
+
+                  </div>
+                </div>
+
+                <!-- Follow Us -->
+                <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.07); border-radius: var(--_radius-m); padding: 3rem;">
+                  <p style="font-size: 1.1rem; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.45); margin-bottom: 2rem;">Follow StarThink</p>
+                  <div style="display: flex; flex-direction: column; gap: 1.2rem;">
+                    <a href="https://www.instagram.com/starthink_my/" target="_blank" rel="noopener" class="sidebar-social-link">
+                      <i class="fa-brands fa-instagram"></i> Instagram
+                    </a>
+                    <a href="https://www.facebook.com/profile.php?id=61580456730158" target="_blank" rel="noopener" class="sidebar-social-link">
+                      <i class="fa-brands fa-facebook"></i> Facebook
+                    </a>
+                    <a href="https://www.tiktok.com/@starthink_my" target="_blank" rel="noopener" class="sidebar-social-link">
+                      <i class="fa-brands fa-tiktok"></i> TikTok
+                    </a>
+                    <a href="https://www.threads.com/@starthink_my" target="_blank" rel="noopener" class="sidebar-social-link">
+                      <i class="fa-brands fa-threads"></i> Threads
+                    </a>
+                  </div>
+                </div>
+
+                <!-- Sidebar CTA -->
+                <div style="background: linear-gradient(135deg, rgba(137,243,54,0.12) 0%, rgba(137,243,54,0.04) 100%); border: 1px solid rgba(137,243,54,0.2); border-radius: var(--_radius-m); padding: 3rem; text-align: center;">
+                  <p style="font-size: 1.1rem; letter-spacing: 0.12em; text-transform: uppercase; color: #89F336; margin-bottom: 1.4rem;">Work with us</p>
+                  <p style="font-size: 1.5rem; line-height: 1.5; color: rgba(255,255,255,0.65); margin-bottom: 2.4rem;">Ready to grow your brand? Let's talk about your goals.</p>
+                  <a class="btn btn-anim btn-default btn-additional slide-right-up" href="contact.html" style="width: 100%; justify-content: center;">
+                    <span class="btn-caption">Get In Touch</span>
+                    <i class="ph-bold ph-arrow-up-right"></i>
+                  </a>
+                </div>
+
+              </div>
+            </div>
+            <!-- Sidebar End -->
+
+          </div>
+        </div>
+      </div>
+      <!-- Two-Column Body End -->
+
+      <!-- CTA Start -->
+      <div class="mxd-section overflow-hidden" style="padding: 7rem 0 9rem; border-top: 1px solid rgba(255,255,255,0.06);">
+        <div class="mxd-container grid-container">
+          <div class="mxd-block">
+            <div class="container-fluid px-0">
+              <div class="row gx-0 align-items-center">
+
+                <div class="col-12 col-xl-7 mxd-grid-item no-margin" style="padding-right: 4rem; padding-bottom: 3rem;">
+                  <p class="mxd-point-subtitle anim-uni-in-up" style="margin-bottom: 2.4rem;">
+                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="20px" height="20px" viewBox="0 0 20 20" fill="currentColor">
+                      <path fill="currentColor" d="M19.6,9.6c0,0-3,0-4,0c-0.4,0-1.8-0.2-1.8-0.2c-0.6-0.1-1.1-0.2-1.6-0.6c-0.5-0.3-0.9-0.8-1.2-1.2c-0.3-0.4-0.4-0.9-0.5-1.4c0,0-0.1-1.1-0.2-1.5c-0.1-1.1,0-4.4,0-4.4C10.4,0.2,10.2,0,10,0S9.6,0.2,9.6,0.4c0,0,0.1,3.3,0,4.4c0,0.4-0.2,1.5-0.2,1.5C9.4,6.7,9.2,7.2,9,7.6C8.7,8.1,8.2,8.5,7.8,8.9c-0.5,0.3-1,0.5-1.6,0.6c0,0-1.2,0.1-1.7,0.2c-1,0.1-4.2,0-4.2,0C0.2,9.6,0,9.8,0,10c0,0.2,0.2,0.4,0.4,0.4c0,0,3.1-0.1,4.2,0c0.4,0,1.7,0.2,1.7,0.2c0.6,0.1,1.1,0.2,1.6,0.6c0.4,0.3,0.8,0.7,1.1,1.1c0.3,0.5,0.5,1,0.6,1.6c0,0,0.1,1.3,0.2,1.7c0,1,0,4.1,0,4.1c0,0.2,0.2,0.4,0.4,0.4s0.4-0.2,0.4-0.4c0,0,0-3.1,0-4.1c0-0.4,0.2-1.7,0.2-1.7c0.1-0.6,0.2-1.1,0.6-1.6c0.3-0.4,0.7-0.8,1.1-1.1c0.5-0.3,1-0.5,1.6-0.6c0,0,1.3-0.1,1.8-0.2c1,0,4,0,4,0c0.2,0,0.4-0.2,0.4-0.4C20,9.8,19.8,9.6,19.6,9.6L19.6,9.6z"/>
+                    </svg>
+                    <span>Let's work together</span>
+                  </p>
+                  <h2 class="reveal-type anim-uni-in-up" style="margin-bottom: 1.8rem; line-height: 1.05;">
+                    Start a project<br>with StarThink.
+                  </h2>
+                  <p class="anim-uni-in-up" style="opacity: 0.6; max-width: 420px;">
+                    We reply within 24 hours. Tell us about your goals and let's build something great together.
+                  </p>
+                </div>
+
+                <div class="col-xl-1 d-none d-xl-flex mxd-grid-item no-margin" style="justify-content: center; align-self: stretch; min-height: 180px;">
+                  <div style="width: 1px; background: rgba(128,128,128,0.25); margin: 0 auto;"></div>
+                </div>
+
+                <div class="col-12 col-xl-4 mxd-grid-item no-margin anim-uni-in-up" style="display: flex; flex-direction: column; gap: 1.5rem; padding-left: 4rem;">
+                  <a class="btn btn-anim btn-default btn-large btn-additional slide-right-up" href="contact.html">
+                    <span class="btn-caption">Contact Us</span>
+                    <i class="ph-bold ph-arrow-up-right"></i>
+                  </a>
+                  <a class="btn btn-anim btn-default btn-large btn-outline slide-right-up" href="https://wa.me/601XXXXXXXX" target="_blank" rel="noopener">
+                    <span class="btn-caption">WhatsApp Us</span>
+                    <i class="fa-brands fa-whatsapp"></i>
+                  </a>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- CTA End -->
+
+    </main>
+    <!-- Page Content End -->
+
+    <!-- Footer Start -->
+    <footer id="mxd-footer" class="mxd-footer">
+      <div class="mxd-footer__text-wrap">
+        <div class="fullwidth-text__tl-trigger"></div>
+        <div class="mxd-footer__fullwidth-text anim-top-to-bottom"></div>
+      </div>
+      <div class="mxd-footer__footer-blocks">
+        <div class="footer-blocks__column animate-card-3">
+          <div class="footer-blocks__card fullheight-card">
+            <div class="footer-blocks__nav">
+              <ul class="footer-nav">
+                <li class="footer-nav__item anim-uni-in-up"><a href="index.html" class="footer-nav__link btn-anim"><span class="btn-caption">Home</span></a></li>
+                <li class="footer-nav__item anim-uni-in-up"><a href="about-us.html" class="footer-nav__link btn-anim"><span class="btn-caption">About Us</span></a></li>
+                <li class="footer-nav__item anim-uni-in-up"><a href="works-simple.html" class="footer-nav__link btn-anim"><span class="btn-caption">Projects</span></a></li>
+                <li class="footer-nav__item anim-uni-in-up"><a href="services.html" class="footer-nav__link btn-anim"><span class="btn-caption">Services</span></a></li>
+                <li class="footer-nav__item anim-uni-in-up"><a href="all_article.html" class="footer-nav__link btn-anim"><span class="btn-caption">Articles</span></a></li>
+                <li class="footer-nav__item anim-uni-in-up"><a href="contact.html" class="footer-nav__link btn-anim"><span class="btn-caption">Contact</span></a></li>
+              </ul>
+            </div>
+            <div class="footer-blocks__links anim-uni-in-up">
+              <a class="btn btn-line-xsmall btn-muted slide-right anim-no-delay" href="#0"><span class="btn-caption">Privacy Policy</span><i class="ph ph-arrow-right"></i></a>
+              <a class="btn btn-line-xsmall btn-muted slide-right anim-no-delay" href="#0"><span class="btn-caption">Terms & Conditions</span><i class="ph ph-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-blocks__column animate-card-3">
+          <div class="footer-blocks__card">
+            <p class="mxd-point-subtitle anim-uni-in-up">
+              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="20px" height="20px" viewBox="0 0 20 20" fill="currentColor"><path fill="currentColor" d="M19.6,9.6c0,0-3,0-4,0c-0.4,0-1.8-0.2-1.8-0.2c-0.6-0.1-1.1-0.2-1.6-0.6c-0.5-0.3-0.9-0.8-1.2-1.2c-0.3-0.4-0.4-0.9-0.5-1.4c0,0-0.1-1.1-0.2-1.5c-0.1-1.1,0-4.4,0-4.4C10.4,0.2,10.2,0,10,0S9.6,0.2,9.6,0.4c0,0,0.1,3.3,0,4.4c0,0.4-0.2,1.5-0.2,1.5C9.4,6.7,9.2,7.2,9,7.6C8.7,8.1,8.2,8.5,7.8,8.9c-0.5,0.3-1,0.5-1.6,0.6c0,0-1.2,0.1-1.7,0.2c-1,0.1-4.2,0-4.2,0C0.2,9.6,0,9.8,0,10c0,0.2,0.2,0.4,0.4,0.4c0,0,3.1-0.1,4.2,0c0.4,0,1.7,0.2,1.7,0.2c0.6,0.1,1.1,0.2,1.6,0.6c0.4,0.3,0.8,0.7,1.1,1.1c0.3,0.5,0.5,1,0.6,1.6c0,0,0.1,1.3,0.2,1.7c0,1,0,4.1,0,4.1c0,0.2,0.2,0.4,0.4,0.4s0.4-0.2,0.4-0.4c0,0,0-3.1,0-4.1c0-0.4,0.2-1.7,0.2-1.7c0.1-0.6,0.2-1.1,0.6-1.6c0.3-0.4,0.7-0.8,1.1-1.1c0.5-0.3,1-0.5,1.6-0.6c0,0,1.3-0.1,1.8-0.2c1,0,4,0,4,0c0.2,0,0.4-0.2,0.4-0.4C20,9.8,19.8,9.6,19.6,9.6L19.6,9.6z"/></svg>
+              <a href="mailto:sales@starthink.net?subject=Project%20Enquiry">sales@starthink.net</a>
+            </p>
+          </div>
+          <div class="footer-blocks__card">
+            <p class="mxd-point-subtitle anim-uni-in-up">
+              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="20px" height="20px" viewBox="0 0 20 20" fill="currentColor"><path fill="currentColor" d="M19.6,9.6c0,0-3,0-4,0c-0.4,0-1.8-0.2-1.8-0.2c-0.6-0.1-1.1-0.2-1.6-0.6c-0.5-0.3-0.9-0.8-1.2-1.2c-0.3-0.4-0.4-0.9-0.5-1.4c0,0-0.1-1.1-0.2-1.5c-0.1-1.1,0-4.4,0-4.4C10.4,0.2,10.2,0,10,0S9.6,0.2,9.6,0.4c0,0,0.1,3.3,0,4.4c0,0.4-0.2,1.5-0.2,1.5C9.4,6.7,9.2,7.2,9,7.6C8.7,8.1,8.2,8.5,7.8,8.9c-0.5,0.3-1,0.5-1.6,0.6c0,0-1.2,0.1-1.7,0.2c-1,0.1-4.2,0-4.2,0C0.2,9.6,0,9.8,0,10c0,0.2,0.2,0.4,0.4,0.4c0,0,3.1-0.1,4.2,0c0.4,0,1.7,0.2,1.7,0.2c0.6,0.1,1.1,0.2,1.6,0.6c0.4,0.3,0.8,0.7,1.1,1.1c0.3,0.5,0.5,1,0.6,1.6c0,0,0.1,1.3,0.2,1.7c0,1,0,4.1,0,4.1c0,0.2,0.2,0.4,0.4,0.4s0.4-0.2,0.4-0.4c0,0,0-3.1,0-4.1c0-0.4,0.2-1.7,0.2-1.7c0.1-0.6,0.2-1.1,0.6-1.6c0.3-0.4,0.7-0.8,1.1-1.1c0.5-0.3,1-0.5,1.6-0.6c0,0,1.3-0.1,1.8-0.2c1,0,4,0,4,0c0.2,0,0.4-0.2,0.4-0.4C20,9.8,19.8,9.6,19.6,9.6L19.6,9.6z"/></svg>
+              <a href="tel:+60122646895">+60 12 264 6895</a>
+            </p>
+          </div>
+          <div class="footer-blocks__card fill-card">
+            <div class="footer-blocks__title anim-uni-in-up"><p class="footer-blocks__title-m">Our Office:</p></div>
+            <div class="anim-uni-in-up">
+              <p class="footer-blocks__text">No. 44-2, 1st Floor, Jln USJ 9/5P,<br>Subang Business Centre,<br>47620 Subang Jaya, Selangor</p>
+            </div>
+          </div>
+        </div>
+        <div class="footer-blocks__column animate-card-3">
+          <div class="footer-blocks__card fullheight-card">
+            <div class="footer-blocks__block">
+              <div class="footer-blocks__title anim-uni-in-up"><p class="footer-blocks__title-l">Follow Us</p></div>
+              <div class="footer-blocks__socials">
+                <ul class="footer-socials">
+                  <li class="footer-socials__item anim-uni-in-up"><a href="https://www.instagram.com/starthink_my/" class="footer-socials__link" target="_blank">Instagram</a></li>
+                  <li class="footer-socials__item anim-uni-in-up"><a href="https://www.facebook.com/profile.php?id=61580456730158" class="footer-socials__link" target="_blank">Facebook</a></li>
+                  <li class="footer-socials__item anim-uni-in-up"><a href="https://www.tiktok.com/@starthink_my" class="footer-socials__link" target="_blank">TikTok</a></li>
+                  <li class="footer-socials__item anim-uni-in-up"><a href="https://www.threads.com/@starthink_my" class="footer-socials__link" target="_blank">Threads</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="footer-blocks__links anim-uni-in-up">
+              <p class="t-xsmall t-muted">StarThink <i class="ph-bold ph-copyright"></i> 2026</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Footer End -->
+
+    <!-- To Top Button -->
+    <a href="#0" id="to-top" class="btn btn-to-top slide-up anim-no-delay">
+      <i class="ph ph-arrow-up"></i>
+    </a>
+
+    <!-- Scripts -->
+    <script src="js/libs.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/particles.js"></script>
+
+  </body>
+
+</html>
