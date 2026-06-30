@@ -407,18 +407,16 @@ $(function() {
     tl.from(fadeInEl, { opacity: 0, duration: 0.3, });
 
     function openMenu(open) {
-      if (!tl.isActive()) {
-        if (open) {
-          tl.play();
-          hamburgerEl.addClass("nav-open");
-        } else {
-          tl.reverse();
-          hamburgerEl.removeClass("nav-open");
-        }
+      if (open) {
+        tl.play();
+        hamburgerEl.addClass("nav-open");
+      } else {
+        tl.reverse();
+        hamburgerEl.removeClass("nav-open");
       }
     }
 
-    hamburgerEl.on("click", function() {
+    hamburgerEl.on("click", function(event) {
       event.preventDefault();
       if ($(this).hasClass("nav-open")) {
         openMenu(false);
