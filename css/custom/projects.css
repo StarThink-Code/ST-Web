@@ -96,6 +96,46 @@
   letter-spacing: 0.04em; line-height: 1.35;
 }
 
+/* Location + year meta row */
+.proj-meta {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.proj-meta__item {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  font-size: 1.25rem;
+  color: rgba(255,255,255,0.38);
+  letter-spacing: 0.03em;
+}
+
+.proj-meta__item i {
+  font-size: 1.4rem;
+  color: rgba(137,243,54,0.65);
+}
+
+/* Service tags */
+.proj-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+}
+
+.proj-tag {
+  font-size: 1.15rem;
+  color: rgba(255,255,255,0.45);
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 40px;
+  padding: 0.35rem 1.1rem;
+  letter-spacing: 0.03em;
+  white-space: nowrap;
+}
+
 /* Gradient divider */
 .proj-divider {
   height: 1px;
