@@ -131,10 +131,4 @@ Contact channels (WhatsApp, email, phone), social media links, office info, busi
 
 ---
 
-## Base Template (for new inner pages)
 
-When adding a new inner page, start from `about-us.html` as the base template. It includes the correct `<head>`, loader, nav, header, floating orbs, particle canvas, footer, and script imports.
-
----
-
-*Built on Rayo HTML Template (mix_design, Themeforest) — customised for StarThink.*
