@@ -1,6 +1,6 @@
 # StarThink — Experiment
 
-Official website for **StarThink Digital Marketing Agency** (starthinkmy.com), a Malaysian digital marketing agency helping small businesses grow through creative content, strategy, and storytelling.
+**StarThink Digital Marketing Agency** (starthinkmy.com), a Malaysian digital marketing agency helping small businesses grow through creative content, strategy, and storytelling.
 
 ---
 
